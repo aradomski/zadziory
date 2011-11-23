@@ -1,8 +1,8 @@
-Projekt: "Gitlink"
+# Projekt: "Gitlink"
 
 Aplikacja internetowa spełniająca funkcję społecznościowego manadżera zakładek (linków).
 
-Szczegóły:
+## Szczegóły:
 - użytkownik może się rejestrować lub logować przy użyciu jednego z kont portali społecznościowych
 - użytkownik może dodawać linki do ogólnej puli linków 
 - użytkownik posiada swoją galerie linków ,które może kategoryzować
@@ -12,8 +12,8 @@ Szczegóły:
 - będzie wyszukiwanie 
 - coś jeszcze dojdzie :)
 
-Technologie:
-- CoffeeScript
+## Technologie:
+- JavaScript
 - Ruby on Rails
 - CSS3
 - HTML5
