@@ -19,3 +19,7 @@ Aplikacja internetowa spełniająca funkcję społecznościowego manadżera zak�
 - HTML5
 - jQuery
 - github.com jako repozytorium danych.
+
+## Zarządzanie projektem.
+Logujemy się na www.projekt-zadziory.cba.pl i na uruchomionej tam platformie śledzimy zadania i je
+wykonujemy :) 
