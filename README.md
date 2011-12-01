@@ -1,16 +1,16 @@
-# Projekt: "Gitlink"
+# Projekt: "Udany związek"
 
-Aplikacja internetowa spełniająca funkcję społecznościowego manadżera zakładek (linków).
+Aplikacja internetowa będąca przyjacielem-doradcą ,który pomaga dbać o drugą połówkę 
+przypominając ważne daty, sugerując określony prezent, czy podpowiadając użytkownikowi 
+jak może zaskoczyć partnera/partnerkę danego dnia.
 
 ## Szczegóły:
 - użytkownik może się rejestrować lub logować przy użyciu jednego z kont portali społecznościowych
-- użytkownik może dodawać linki do ogólnej puli linków 
-- użytkownik posiada swoją galerie linków ,które może kategoryzować
-- każdy link będzie podlegać różnym statystykom ( np. ile ludzi już go ma w swoich zakładkach )
-- linki można komentować
-- użytkownik może podglądać linki drugiego użytkownika - w końcu chodzi o by promować ciekawe strony ;)
-- będzie wyszukiwanie 
-- coś jeszcze dojdzie :)
+- użytkownik uzupełnia dane o swoim partnerze ,tzn. zainteresowania, ważne daty, ulubione filmy itp.
+- użytkownik ma możliwość otrzymania nie tylko maila, ale także smsa, gdy zbliża się ważna data
+- co najmniej raz w tygodniu pojawia się sugestia (prawdopodobnie wpisywana przez admina) na temat tego
+	jak może uszczęśliwić i zaskoczyć partnera/partnerkę
+- na podstawie wpisanych zainteresowań sugestie dotyczące najlepszego prezentu
 
 ## Technologie:
 - JavaScript
