@@ -1,0 +1,40 @@
+<% title "All partners" %>
+
+<% @partners.each do |partner| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Name</span>
+    <span class="value"><%= partner.name %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Surname</span>
+    <span class="value"><%= partner.surname %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Yob</span>
+    <span class="value"><%= partner.yob %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Anniversary</span>
+    <span class="value"><%= partner.anniversary %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Flower</span>
+    <span class="value"><%= partner.flower %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Color</span>
+    <span class="value"><%= partner.color %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', partner, class: "btn" %>
+    <%= link_to 'Edit', edit_partner_path(partner), class: "btn" %>
+    <%= link_to 'Destroy', partner, confirm: 'Are you sure?',
+          method: :delete, class: "btn danger" %>
+  </div>
+</article>
+<% end %>
+
+<div class="link">
+  <%= link_to 'New Partner', new_partner_path, class: "btn primary" %>
+</div>

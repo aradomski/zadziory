@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  surname: MyString
+  yob: 2011-12-03
+  anniversary: 2011-12-03
+  flower: MyString
+  color: MyString
+
+two:
+  name: MyString
+  surname: MyString
+  yob: 2011-12-03
+  anniversary: 2011-12-03
+  flower: MyString
+  color: MyString
