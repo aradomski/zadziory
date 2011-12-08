@@ -3,8 +3,8 @@
     <%= f.input :name %>
     <%= f.input :surname %>
     <%= f.input :nick %>
-    <%= f.input :sex %>
-    <%= f.input :isUser %>
+    <%= f.input :sex, :as => :radio, :collection => ["Male", "Female"]%>
+    <%= f.input :isUser, :label => "isUser" %>
   <% end %>
 
   <%= f.buttons do %>
