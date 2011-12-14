@@ -1,5 +1,12 @@
 Zadziory::Application.routes.draw do
-  resources :person_infos
+  devise_for :users
+  
+  devise_for :users, :path_names => {
+  :sign_in =>  "login",
+  :sign_up =>  "register",
+  :sign_out => "logout"
+}
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

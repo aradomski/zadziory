@@ -41,17 +41,29 @@
     </div>
 
     <div class="container">
-
+		
       <div class="content">
         <div class="page-header">
           <%= content_tag :h1, yield(:title) if show_title? %>
         </div>
         <div class="row">
+			<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, :id => "#{name}" %>
+			<% end %>
           <div class="span10"><!-- 10 * 60 = 600 px -->
             <%= yield %>
           </div>
           <div class="span4"><!-- 4 * 60 = 240 px -->
             <h3>[secondary content]</h3>
+            <nav id="authentication">
+			<% if user_signed_in? %>
+				Logged as <%= current_user.email %>. Not you?
+				<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+			<% else %>
+				<%= link_to "Register", new_user_registration_path %> or
+				<%= link_to "Login", new_user_session_path %>
+				<% end %>
+		</nav>
           </div>
         </div>
       </div>
