@@ -1,9 +1,7 @@
 Zadziory::Application.routes.draw do
-<<<<<<< HEAD
+
   resources :places
-=======
   resources :histories
->>>>>>> c89cf4337b5a04db349f91412534d8c0e0a518d6
 
   devise_for :users
   
