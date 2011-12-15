@@ -7,6 +7,8 @@ gem 'rails', '3.1.1'
 
 gem 'sqlite3'
 gem 'devise'
+gem 'cancan'
+gem 'role_model'
 
 # Gems used only for assets and not required
 # in production environments by default.
