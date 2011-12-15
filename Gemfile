@@ -41,5 +41,6 @@ gem "formtastic"
 gem "coffee-script"
 gem "execjs"
 gem "therubyracer"
+gem "hpricot"
 gem "wirble", :group => :development
 gem "hirb", :group => :development
