@@ -1,0 +1,44 @@
+<%= semantic_form_for @place do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :is_active %>
+    <%= f.input :owner %>
+    <%= f.input :availability_from %>
+    <%= f.input :availability_to %>
+    <%= f.input :price_min %>
+    <%= f.input :price_max %>
+    <%= f.input :deposit %>
+    <%= f.input :grade %>
+    <%= f.input :telephone %>
+    <%= f.input :country %>
+    <%= f.input :county %>
+    <%= f.input :city %>
+    <%= f.input :district %>
+    <%= f.input :street %>
+    <%= f.input :place_nr %>
+    <%= f.input :flat_nr %>
+    <%= f.input :coordinates %>
+    <%= f.input :place_type %>
+    <%= f.input :floor_nr %>
+    <%= f.input :nr_of_floors %>
+    <%= f.input :nr_of_rooms %>
+    <%= f.input :build_year %>
+    <%= f.input :heating_type %>
+    <%= f.input :people_max %>
+    <%= f.input :for_who %>
+    <%= f.input :min_length_lease %>
+    <%= f.input :type_length_lease %>
+    <%= f.input :description %>
+    <%= f.input :has_balcony %>
+    <%= f.input :has_garage %>
+    <%= f.input :has_basement %>
+    <%= f.input :has_parking %>
+    <%= f.input :has_internet %>
+    <%= f.input :has_terrace %>
+    <%= f.input :has_lift %>
+    <%= f.input :has_garden %>
+  <% end %>
+
+  <%= f.buttons do %>
+    <%= f.commit_button %>
+  <% end %>
+<% end %>

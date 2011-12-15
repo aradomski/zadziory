@@ -1,0 +1,160 @@
+<% title "All places" %>
+
+<% @places.each do |place| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Is active</span>
+    <span class="value"><%= place.is_active %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Owner</span>
+    <span class="value"><%= place.owner %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Availability from</span>
+    <span class="value"><%= place.availability_from %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Availability to</span>
+    <span class="value"><%= place.availability_to %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Price min</span>
+    <span class="value"><%= place.price_min %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Price max</span>
+    <span class="value"><%= place.price_max %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Deposit</span>
+    <span class="value"><%= place.deposit %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Grade</span>
+    <span class="value"><%= place.grade %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Telephone</span>
+    <span class="value"><%= place.telephone %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Country</span>
+    <span class="value"><%= place.country %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">County</span>
+    <span class="value"><%= place.county %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">City</span>
+    <span class="value"><%= place.city %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">District</span>
+    <span class="value"><%= place.district %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Street</span>
+    <span class="value"><%= place.street %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Place nr</span>
+    <span class="value"><%= place.place_nr %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Flat nr</span>
+    <span class="value"><%= place.flat_nr %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Coordinates</span>
+    <span class="value"><%= place.coordinates %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Place type</span>
+    <span class="value"><%= place.place_type %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Floor nr</span>
+    <span class="value"><%= place.floor_nr %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Nr of floors</span>
+    <span class="value"><%= place.nr_of_floors %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Nr of rooms</span>
+    <span class="value"><%= place.nr_of_rooms %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Build year</span>
+    <span class="value"><%= place.build_year %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Heating type</span>
+    <span class="value"><%= place.heating_type %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">People max</span>
+    <span class="value"><%= place.people_max %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">For who</span>
+    <span class="value"><%= place.for_who %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Min length lease</span>
+    <span class="value"><%= place.min_length_lease %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Type length lease</span>
+    <span class="value"><%= place.type_length_lease %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Description</span>
+    <span class="value"><%= place.description %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has balcony</span>
+    <span class="value"><%= place.has_balcony %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has garage</span>
+    <span class="value"><%= place.has_garage %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has basement</span>
+    <span class="value"><%= place.has_basement %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has parking</span>
+    <span class="value"><%= place.has_parking %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has internet</span>
+    <span class="value"><%= place.has_internet %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has terrace</span>
+    <span class="value"><%= place.has_terrace %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has lift</span>
+    <span class="value"><%= place.has_lift %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Has garden</span>
+    <span class="value"><%= place.has_garden %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', place, class: "btn" %>
+    <%= link_to 'Edit', edit_place_path(place), class: "btn" %>
+    <%= link_to 'Destroy', place, confirm: 'Are you sure?',
+          method: :delete, class: "btn danger" %>
+  </div>
+</article>
+<% end %>
+
+<div class="link">
+  <%= link_to 'New Place', new_place_path, class: "btn primary" %>
+</div>

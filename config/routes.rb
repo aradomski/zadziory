@@ -1,4 +1,6 @@
 Zadziory::Application.routes.draw do
+  resources :places
+
   devise_for :users
   
   devise_for :users, :path_names => {
