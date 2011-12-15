@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  load_and_authorize_resource
   # GET /places
   # GET /places.xml
   def index
@@ -28,9 +29,13 @@ class PlacesController < ApplicationController
   # POST /places
   # POST /places.xml
   def create
-    @place = Place.new(params[:place])
-    @place.save
-    respond_with(@place)
+    #@place = Place.new(params[:place])
+    #@place.save
+    #respond_with(@place)
+    # scope'owane 
+	@place = current_user.places.build(params[:place])
+	@place.save
+	respond_with(@place)
   end
 
   # PUT /places/1

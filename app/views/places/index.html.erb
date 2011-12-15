@@ -154,7 +154,8 @@
   </div>
 </article>
 <% end %>
-
+<% if can? :create, Place %>
 <div class="link">
   <%= link_to 'New Place', new_place_path, class: "btn primary" %>
 </div>
+<% end %>
