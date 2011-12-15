@@ -1,5 +1,9 @@
 Zadziory::Application.routes.draw do
+<<<<<<< HEAD
   resources :places
+=======
+  resources :histories
+>>>>>>> c89cf4337b5a04db349f91412534d8c0e0a518d6
 
   devise_for :users
   
@@ -59,7 +63,7 @@ Zadziory::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'PersonInfos#index'
+   root :to => 'histories#index'
 
   # See how all your routes lay out with "rake routes"
 

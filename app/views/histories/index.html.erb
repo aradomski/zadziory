@@ -1,0 +1,48 @@
+<% title "All histories" %>
+
+<% @histories.each do |history| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Date start</span>
+    <span class="value"><%= history.date_start %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Date end</span>
+    <span class="value"><%= history.date_end %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Comment item</span>
+    <span class="value"><%= history.comment_item %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Comment tenant</span>
+    <span class="value"><%= history.comment_tenant %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Comment owner</span>
+    <span class="value"><%= history.comment_owner %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Rate item</span>
+    <span class="value"><%= history.rate_item %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Rate tenant</span>
+    <span class="value"><%= history.rate_tenant %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Rate owner</span>
+    <span class="value"><%= history.rate_owner %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', history, class: "btn" %>
+    <%= link_to 'Edit', edit_history_path(history), class: "btn" %>
+    <%= link_to 'Destroy', history, confirm: 'Are you sure?',
+          method: :delete, class: "btn danger" %>
+  </div>
+</article>
+<% end %>
+
+<div class="link">
+  <%= link_to 'New History', new_history_path, class: "btn primary" %>
+</div>

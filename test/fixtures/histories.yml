@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_start: 2011-12-15
+  date_end: 2011-12-15
+  comment_item: MyText
+  comment_tenant: MyText
+  comment_owner: MyText
+  rate_item: 1.5
+  rate_tenant: 1.5
+  rate_owner: 1.5
+
+two:
+  date_start: 2011-12-15
+  date_end: 2011-12-15
+  comment_item: MyText
+  comment_tenant: MyText
+  comment_owner: MyText
+  rate_item: 1.5
+  rate_tenant: 1.5
+  rate_owner: 1.5
