@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111215101406) do
+ActiveRecord::Schema.define(:version => 20111215102610) do
 
   create_table "histories", :force => true do |t|
     t.date     "date_start"
@@ -22,6 +22,57 @@ ActiveRecord::Schema.define(:version => 20111215101406) do
     t.float    "rate_item"
     t.float    "rate_tenant"
     t.float    "rate_owner"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "person_infos", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "nick"
+    t.boolean  "sex"
+    t.boolean  "isUser"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "places", :force => true do |t|
+    t.boolean  "is_active"
+    t.string   "owner"
+    t.date     "availability_from"
+    t.date     "availability_to"
+    t.decimal  "price_min"
+    t.decimal  "price_max"
+    t.decimal  "deposit"
+    t.float    "grade"
+    t.string   "telephone"
+    t.string   "country"
+    t.string   "county"
+    t.string   "city"
+    t.string   "district"
+    t.string   "street"
+    t.integer  "place_nr"
+    t.integer  "flat_nr"
+    t.string   "coordinates"
+    t.string   "place_type"
+    t.integer  "floor_nr"
+    t.integer  "nr_of_floors"
+    t.integer  "nr_of_rooms"
+    t.integer  "build_year"
+    t.string   "heating_type"
+    t.integer  "people_max"
+    t.string   "for_who"
+    t.integer  "min_length_lease"
+    t.integer  "type_length_lease"
+    t.text     "description"
+    t.boolean  "has_balcony"
+    t.boolean  "has_garage"
+    t.boolean  "has_basement"
+    t.boolean  "has_parking"
+    t.boolean  "has_internet"
+    t.boolean  "has_terrace"
+    t.boolean  "has_lift"
+    t.boolean  "has_garden"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
