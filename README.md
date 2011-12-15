@@ -1,16 +1,14 @@
-# Projekt: "Udany związek"
+# Projekt: "RentLuk"
 
-Aplikacja internetowa będąca przyjacielem-doradcą ,który pomaga dbać o drugą połówkę 
-przypominając ważne daty, sugerując określony prezent, czy podpowiadając użytkownikowi 
-jak może zaskoczyć partnera/partnerkę danego dnia.
+System wynajmowania mieszkań z możliwością ich oceniania oraz oceniania także najemców i wynajmujących.
+
 
 ## Szczegóły:
 - użytkownik może się rejestrować lub logować przy użyciu jednego z kont portali społecznościowych
-- użytkownik uzupełnia dane o swoim partnerze ,tzn. zainteresowania, ważne daty, ulubione filmy itp.
-- użytkownik ma możliwość otrzymania nie tylko maila, ale także smsa, gdy zbliża się ważna data
-- co najmniej raz w tygodniu pojawia się sugestia (prawdopodobnie wpisywana przez admina) na temat tego
-	jak może uszczęśliwić i zaskoczyć partnera/partnerkę
-- na podstawie wpisanych zainteresowań sugestie dotyczące najlepszego prezentu
+- wynajmujący uzupełnia dane o mieszkanie ,tzn. metrarz, położenie, ilość okien, przybliżona cena wynajmu, ustalenia minimalnej i maksymalnej zależnej od oceny.
+- najmujący może wyszukiwać mieszkanie po lokacji, cenie, parametrach mieszkania
+- wynajmujacy i najmujący mogą sobie nawzajem wystawiać oceny
+- oceny będą wpływać na upust w cenie wynajmu
 
 ## Technologie:
 - JavaScript
