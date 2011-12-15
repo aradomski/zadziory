@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(:version => 20111215102610) do
     t.datetime "updated_at"
   end
 
-
   create_table "places", :force => true do |t|
     t.boolean  "is_active"
     t.string   "owner"
