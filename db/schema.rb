@@ -11,14 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111208110722) do
+ActiveRecord::Schema.define(:version => 20111215101406) do
 
-  create_table "person_infos", :force => true do |t|
-    t.string   "name"
-    t.string   "surname"
-    t.string   "nick"
-    t.boolean  "sex"
-    t.boolean  "isUser"
+  create_table "histories", :force => true do |t|
+    t.date     "date_start"
+    t.date     "date_end"
+    t.text     "comment_item"
+    t.text     "comment_tenant"
+    t.text     "comment_owner"
+    t.float    "rate_item"
+    t.float    "rate_tenant"
+    t.float    "rate_owner"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

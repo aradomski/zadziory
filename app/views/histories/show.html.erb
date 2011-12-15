@@ -1,0 +1,44 @@
+<% title "Show history" %>
+
+<% if notice -%>
+<div id="notice"><%= notice %></div>
+<% end -%>
+
+<article class="single">
+  <div class="attribute">
+    <span class="name">Date start</span>
+    <span class="value"><%= @history.date_start %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Date end</span>
+    <span class="value"><%= @history.date_end %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Comment item</span>
+    <span class="value"><%= @history.comment_item %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Comment tenant</span>
+    <span class="value"><%= @history.comment_tenant %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Comment owner</span>
+    <span class="value"><%= @history.comment_owner %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Rate item</span>
+    <span class="value"><%= @history.rate_item %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Rate tenant</span>
+    <span class="value"><%= @history.rate_tenant %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Rate owner</span>
+    <span class="value"><%= @history.rate_owner %></span>
+  </div>
+  <div class="link">
+    <%= link_to 'Edit', edit_history_path(@history), class: "btn primary" %>
+    <%= link_to 'Back', histories_path, class: "btn primary" %>
+  </div>
+</article>
