@@ -5,7 +5,7 @@ System wynajmowania mieszkań z możliwością ich oceniania oraz oceniania tak�
 
 ## Szczegóły:
 - użytkownik może się rejestrować lub logować przy użyciu jednego z kont portali społecznościowych
-- wynajmujący uzupełnia dane o mieszkanie ,tzn. metrarz, położenie, ilość okien, przybliżona cena wynajmu, ustalenia minimalnej i maksymalnej zależnej od oceny.
+- wynajmujący uzupełnia dane o mieszkanie ,tzn. metraż, położenie, ilość okien, przybliżona cena wynajmu, ustalenia minimalnej i maksymalnej zależnej od oceny.
 - najmujący może wyszukiwać mieszkanie po lokacji, cenie, parametrach mieszkania
 - wynajmujacy i najmujący mogą sobie nawzajem wystawiać oceny
 - oceny będą wpływać na upust w cenie wynajmu
