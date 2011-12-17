@@ -61,6 +61,7 @@ GEM
     kaminari (0.12.4)
       rails (>= 3.0.0)
     libv8 (3.3.10.4)
+    localized_country_select (0.0.1)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -140,6 +141,7 @@ DEPENDENCIES
   hpricot
   jquery-rails
   kaminari
+  localized_country_select
   rails (= 3.1.1)
   responders
   role_model

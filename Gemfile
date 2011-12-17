@@ -43,6 +43,7 @@ gem "formtastic"
 gem "coffee-script"
 gem "execjs"
 gem "therubyracer"
+gem "localized_country_select"
 gem "hpricot"
 gem "wirble", :group => :development
 gem "hirb", :group => :development
