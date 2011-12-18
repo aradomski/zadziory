@@ -1,0 +1,28 @@
+<% title "All preferences" %>
+
+<% @preferences.each do |preference| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Animal</span>
+    <span class="value"><%= preference.animal %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Smoking</span>
+    <span class="value"><%= preference.smoking %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Relationship</span>
+    <span class="value"><%= preference.relationship %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', preference, class: "btn" %>
+    <%= link_to 'Edit', edit_preference_path(preference), class: "btn" %>
+    <%= link_to 'Destroy', preference, confirm: 'Are you sure?',
+          method: :delete, class: "btn danger" %>
+  </div>
+</article>
+<% end %>
+
+<div class="link">
+  <%= link_to 'New Preference', new_preference_path, class: "btn primary" %>
+</div>

@@ -1,5 +1,7 @@
 Zadziory::Application.routes.draw do
 
+  resources :preferences
+
   resources :places
   resources :histories
 

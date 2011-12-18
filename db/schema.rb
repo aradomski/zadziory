@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111215164849) do
+ActiveRecord::Schema.define(:version => 20111218174359) do
 
   create_table "histories", :force => true do |t|
     t.date     "date_start"
@@ -63,6 +63,14 @@ ActiveRecord::Schema.define(:version => 20111215164849) do
     t.boolean  "has_terrace"
     t.boolean  "has_lift"
     t.boolean  "has_garden"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "preferences", :force => true do |t|
+    t.boolean  "animal"
+    t.boolean  "smoking"
+    t.boolean  "relationship"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
