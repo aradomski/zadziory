@@ -3,20 +3,23 @@
 System wynajmowania mieszkań z możliwością ich oceniania oraz oceniania także najemców i wynajmujących.
 
 ## Szczegóły użycia systemu - scenariusze użycia:
-Odwiedzający: Wchodzi na stronę RentLuk i widzi formularz wyszukiwania mieszkania oraz 
+#Odwiedzający: 
+	Wchodzi na stronę RentLuk i widzi formularz wyszukiwania mieszkania oraz 
 	listę najnowszych dodanych mieszkań lub najlepszych – aktywnych. Żeby wejść w szczegóły
 	mieszkania odwiedzający musi się zalogować lub zarejestrować jeśli nie ma konta. 
 	Jeśli ma zamiar tylko szukać mieszkania, to może się zalogować przy pomocy 
 	jednego z portali społecznościowych.
 
-Zarejestrowany użytkownik - najemca: Po zalogowaniu się widzi formularz szukania mieszkania i listę 
+#Zarejestrowany użytkownik - najemca: 
+	Po zalogowaniu się widzi formularz szukania mieszkania i listę 
 	ostatnich/najlepszych mieszkań. Mam dostęp do szczegółów swojego konta. Tam:
 	- możliwość zmiany hasła/ nicku itd.
 	- podgląd historii transakcji ( tu komentarze ) 
 	- aktualna ocena użytkownika
 	- przejście do podglądu aktualnie wynajmowanego mieszkania
 
-Zarejestrowany użytkownik – właściciel: Po zalogowaniu się widzi panel właściciela, na którym 
+#Zarejestrowany użytkownik – właściciel: 
+	Po zalogowaniu się widzi panel właściciela, na którym 
 	może wykonywać pewne operacje:
 	- może dodać mieszkanie, które chce dać do wynajęcia
 	- może przejść do podglądu historii 
@@ -24,12 +27,14 @@ Zarejestrowany użytkownik – właściciel: Po zalogowaniu się widzi panel wł
 	- widzi aktualną ocenę użytkownika
 	- może przejść na listę swoich mieszkań
 
-Moderator: Po zalogowaniu się widzi, panel moderatora, z którego może:
+#Moderator: 
+	Po zalogowaniu się widzi, panel moderatora, z którego może:
 	- przejść na listę mieszkań, gdzie może edytować opis mieszkania
 	- przejść do listy historii, gdzie może edytować komentarze
 	- może wysyłać maile do złych ludzi ( feature: dawać bany )
 
-Administrator: Po zalogowaniu się widzi panel admina, gdzie może:
+#Administrator: 
+	Po zalogowaniu się widzi panel admina, gdzie może:
 	- jest lista użytkowników (osobno właścicieli i najemców lub jedna 
 		lista user-ów z możliwością filtrowania po roli)
 	- dokonywać zmian dotyczących swojego konta
@@ -37,7 +42,7 @@ Administrator: Po zalogowaniu się widzi panel admina, gdzie może:
 		może dodawać użytkowników , mieszkania.
 	- To czego tu nie ma, to może tez
 
-Ogólne info:
+#Ogólne info:
 	- wynajmujący uzupełnia dane o mieszkanie ,tzn. metrarz, położenie, ilość okien, przybliżona cena wynajmu, ustalenia minimalnej i maksymalnej zależnej od oceny.
 	- najmujący może wyszukiwać mieszkanie po lokacji, cenie, parametrach mieszkania
 	- wynajmujacy i najmujący mogą sobie nawzajem wystawiać oceny
