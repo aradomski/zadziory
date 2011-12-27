@@ -7,8 +7,12 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :roles, :email, :password, :password_confirmation, :remember_me
+
+	has_many :places, :dependent => :destroy
+	has_many :histories, :dependent => :destroy
+	has_one :preference
   
   roles_attribute :roles_mask
   
-   roles :admin, :moderator, :owner, :tenant, :banned
+  roles :admin, :moderator, :owner, :tenant, :banned
 end

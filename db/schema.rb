@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111218174359) do
+ActiveRecord::Schema.define(:version => 20111227145335) do
 
   create_table "histories", :force => true do |t|
     t.date     "date_start"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20111218174359) do
     t.float    "rate_owner"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "place_id"
   end
 
   create_table "places", :force => true do |t|
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20111218174359) do
     t.boolean  "has_garden"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "preferences", :force => true do |t|
@@ -73,6 +76,8 @@ ActiveRecord::Schema.define(:version => 20111218174359) do
     t.boolean  "relationship"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "place_id"
   end
 
   create_table "users", :force => true do |t|
