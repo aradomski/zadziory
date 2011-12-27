@@ -26,17 +26,30 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#"><%=image_tag("logo3.png", :alt=>"Logo", :width=>"180")%></a>
+          <a class="brand" href="/"><%=image_tag("logo3.png", :alt=>"Logo", :width=>"180")%></a>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <form action="" class="pull-right">
+          
+		<div class="pull-right">
+			 <% if user_signed_in? %>
+				Logged as <%= current_user.email %>. Not you?
+				<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+			<% else %>
+				<%= link_to "Login", new_user_session_path %>
+				or
+				<%= link_to "Register", new_user_registration_path %> 
+			<% end %>
+		</div>
+			  <!--<form action="" class="pull-right">
             <input class="input-small" type="text" placeholder="Username">
             <input class="input-small" type="password" placeholder="Password">
             <button class="btn" type="submit">Sign in through GitHub</button>
-          </form>
+            </form>
+             -->
+          
         </div>
       </div>
     </div>
@@ -56,6 +69,7 @@
           </div>
           <div class="span4"><!-- 4 * 60 = 240 px -->
             <h3>[secondary content]</h3>
+            <!--
             <nav id="authentication">
 			<% if user_signed_in? %>
 				Logged as <%= current_user.email %>. Not you?
@@ -64,7 +78,8 @@
 				<%= link_to "Register", new_user_registration_path %> or
 				<%= link_to "Login", new_user_session_path %>
 				<% end %>
-		</nav>
+			</nav>
+			-->
           </div>
         </div>
       </div>
