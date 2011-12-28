@@ -8,3 +8,15 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
+
+
+// trza sie przyjrzec, skumać ajax w railsie
+$(document).ready(function() {
+$('alert').(function(){			
+		$(this).fadeIn('slow');
+		$(this).css('color','#CC0000');
+		$(this).mouseover(function(){
+		$(this).fadeOut('slow');
+		});
+});
+});

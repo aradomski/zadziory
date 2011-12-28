@@ -13,7 +13,7 @@ class Ability
     elsif user.has_role? :tenant
       can [:read], [Place]
     else
-		# nic
+	  can [:index], [Place]
     end
   end
 end

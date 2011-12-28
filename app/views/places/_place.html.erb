@@ -1,0 +1,39 @@
+	<div class="place">
+		
+		<div class="where">
+			<b><%= place.city %></b>, <%= place.district %><br/>
+		</div>
+		
+		<% if place.is_active %>
+			<div class="activity">
+			<%=image_tag("active.png", :alt=>"Place offer is active!", :width=>"25", :height=>"25")%>
+			<span class="aaa">Place offer is active!</span>
+			</div>
+		<% end %>
+		<div class="grade">Average: <%= place.grade %></div>
+		<div class="prizes">Prize min: <%= place.price_min %></div>
+		<div class="placeInfo">	
+			<b> Type: </b> <%= place.place_type %>
+			<b> Surface: </b> <%= place.surface %>
+			<b> Rooms: </b><%= place.nr_of_rooms %>
+			<b> Heating: </b><%= place.heating_type %>
+		</div>
+		<div class="people">
+			<b>For: </b><%= place.for_who %>
+			<b>Max people: </b><%= place.people_max %>
+		</div>
+		<div class="dates">	
+			<b>Avaible from: </b> <%= place.availability_from %>
+			<b>to: </b><%= place.availability_to %>
+		</div>
+		<div class="options">
+			<%= link_to "Show", place%>
+			<% if can? :update, place %>
+				<%= link_to "Edit", edit_place_path(place) %>
+			<% end %>
+			<% if can? :destroy, place %>
+				<%= link_to "Delete", place, :confirm => 'Are you sure?', :method => :delete %>
+			<% end %>
+		</div>
+	
+	</div>

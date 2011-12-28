@@ -1,0 +1,7 @@
+
+<% for role in User.valid_roles 
+	if role == :tenant || role == :owner %>
+		<%= radio_button_tag "user[roles][]", role, @user.roles.include?(role) %>
+		<%= role.to_s.humanize %>
+	<% end %>
+<% end %>
