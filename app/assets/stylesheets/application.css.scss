@@ -10,3 +10,77 @@
 .pull-right {
 	margin-top:10px;
 }
+
+
+/* MIESZKANIE - ELEMENT W INDEX */
+
+.place {
+	margin-bottom: 7px;
+	border: 2px solid #0776A0;
+	min-height:100px;
+}
+.where{
+	padding:5px;
+	float: right;
+	font-size:14px;
+}
+
+.activity{
+	position:absolute;
+	margin-left:210px;
+	width:150px;
+	font-size:13px;
+}
+
+.aaa{
+	position:absolute;
+	margin-top:5px;
+	margin-left:3px;
+}
+
+.grade {
+	font-size: 14px;
+	padding:5px;
+}
+
+.prizes{
+	margin-top:15px;
+	margin-left:60px;
+	font-weight:bold;
+	font-size:20px;
+	#border-left: 1px solid #A61D00;
+	color:#BF4930
+}
+
+.placeInfo{
+ background-color:#DDDDDD;
+ margin-left:20px;
+ margin-top:10px;
+ font-size:17px;
+ width:480px;
+}
+
+.people{
+ background-color:#DDDDDD;
+ margin-left:60px;
+ font-size:17px;
+ width:440px;
+}
+
+.dates{
+ background-color:#DDDDDD;
+ margin-left:100px;
+ font-size:17px;
+ width:400px;
+}
+
+/* Linki */
+
+.options{
+	margin-left:460px;
+}
+
+.options a{
+	font-size:13px;
+}
+

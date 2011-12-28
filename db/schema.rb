@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111227145335) do
+ActiveRecord::Schema.define(:version => 20111228163152) do
 
   create_table "histories", :force => true do |t|
     t.date     "date_start"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20111227145335) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.float    "surface",           :limit => 255
   end
 
   create_table "preferences", :force => true do |t|
