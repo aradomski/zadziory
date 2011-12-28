@@ -2,8 +2,10 @@
   <%= f.inputs do %>
     <%= f.input :is_active %>
     <%= f.input :owner %>
-    <%= f.input :availability_from %>
-    <%= f.input :availability_to %>
+<!--    <%= f.input :availability_from %>
+    <%= f.input :availability_to %>-->
+    Availability from: <%= f.datepicker 'availability_from' %>
+    Availability to:   <%= f.datepicker 'availability_to' %>
     <%= f.input :price_min %>
     <%= f.input :price_max %>
     <%= f.input :deposit %>
