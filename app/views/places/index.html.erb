@@ -3,14 +3,20 @@
 
 <article class="index">
 
-<div id="fortunes">
+<div id="places">
 	<%= render :partial => 'place', :collection => @places %>
 </div>
 
 </article>
+
+ <aside>
+			Mega wypaśny ajaxowany formularz szukania tutaj!
+ </aside>
 
 <% if can? :create, Place %>
 <div class="link">
   <%= link_to 'New Place', new_place_path, class: "btn primary" %>
 </div>
 <% end %>
+
+
