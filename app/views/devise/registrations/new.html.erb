@@ -11,8 +11,11 @@
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
-
+	
+  <%= render :partial => "devise/shared/roles"%>
+	
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
