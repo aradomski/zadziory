@@ -1,0 +1,36 @@
+<div class="place">
+	<div class="attribute">
+		<span class="name">Comment item</span>
+		<span class="value"><%= history.comment_item %></span>
+	</div>
+	<div class="attribute">
+		<span class="name">Date start</span>
+		<span class="value"><%= history.date_start %></span>
+	</div>
+	<div class="attribute">
+		<span class="name">Date end</span>
+		<span class="value"><%= history.date_end %></span>
+	</div>
+	<div class="attribute">
+		<span class="name">Rate item</span>
+		<span class="value"><%= history.rate_item %></span>
+
+		<span class="name">Rate tenant</span>
+		<span class="value"><%= history.rate_tenant %></span>
+	
+		<span class="name">Rate owner</span>
+		<span class="value"><%= history.rate_owner %></span>
+	</div>
+
+
+	<div class="options">
+			<%= link_to "Show", history%>
+			<% if can? :update, history%>
+				<%= link_to "Edit", edit_history_path(history) %>
+			<% end %>
+			<% if can? :destroy, history %>
+				<%= link_to "Delete", history, :confirm => 'Are you sure?', :method => :delete %>
+			<% end %>
+	</div>
+
+</div>

@@ -1,7 +1,8 @@
 <%= semantic_form_for @history do |f| %>
   <%= f.inputs do %>
-    <%= f.input :date_start %>
-    <%= f.input :date_end %>
+  <!--  <%= f.input :date_start %> <%= f.input :date_end %> -->
+	Date start: <%= f.datepicker 'date_start' %>   
+	Date end: <%= f.datepicker 'date_end' %>   
     <%= f.input :comment_item %>
     <%= f.input :comment_tenant %>
     <%= f.input :comment_owner %>
