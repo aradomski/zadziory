@@ -4,4 +4,7 @@ class Place < ActiveRecord::Base
 	has_one :preference
 	has_many :histories, :dependent => :destroy
 
+	scope :inactive, where(:is_active => false)
+	scope :active, where(:is_active => true)
+
 end

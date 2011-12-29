@@ -1,0 +1,9 @@
+    pl:
+      active_admin:
+        dashboard: "Tablica"
+        dashboard_welcome:
+          welcome: "Witaj w Active Admin. To jest domyślna strona tablicy."
+          call_to_action: "By dodać kolejne sekcje do tablicy, zobacz 'app/admin/dashboards.rb'"
+        blank_slate:
+          content: "Nie dodano jeszcze żadnych %{resource_name} ."
+          link: "Dodaj"
