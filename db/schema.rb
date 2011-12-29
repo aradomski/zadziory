@@ -28,27 +28,6 @@ ActiveRecord::Schema.define(:version => 20111229134319) do
     t.integer  "place_id"
   end
 
-  create_table "partners", :force => true do |t|
-    t.string   "name"
-    t.string   "surname"
-    t.date     "yob"
-    t.date     "anniversary"
-    t.string   "flower"
-    t.string   "color"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "person_infos", :force => true do |t|
-    t.string   "name"
-    t.string   "surname"
-    t.string   "nick"
-    t.boolean  "sex"
-    t.boolean  "isUser"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "places", :force => true do |t|
     t.boolean  "is_active"
     t.string   "owner"
