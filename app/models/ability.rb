@@ -9,7 +9,8 @@ class Ability
     elsif user.has_role? :moderator
       can [:read, :update, :destroy], [Place], :user_id => user.id
     elsif user.has_role? :owner
-      can [:create, :read, :update, :destroy], [Place]
+	  can [:read], [Place]
+      can [:create, :update, :destroy], [Place], :user_id => user.id
     elsif user.has_role? :tenant
       can [:read], [Place]
     else
