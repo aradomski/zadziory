@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111228172910) do
+ActiveRecord::Schema.define(:version => 20111229134319) do
 
   create_table "histories", :force => true do |t|
     t.date     "date_start"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20111228172910) do
     t.float    "grade"
     t.string   "telephone"
     t.string   "country"
-    t.string   "county"
+    t.string   "region"
     t.string   "city"
     t.string   "district"
     t.string   "street"
