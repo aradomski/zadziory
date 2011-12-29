@@ -14,5 +14,5 @@ class User < ActiveRecord::Base
   
   roles_attribute :roles_mask
   
-  roles :admin, :moderator, :owner, :tenant, :banned
+  roles :moderator, :owner, :tenant, :banned #:admin,
 end

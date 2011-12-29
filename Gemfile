@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'cancan'
 gem 'role_model'
+gem 'activeadmin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,7 +41,7 @@ end
 gem 'responders'
 gem 'kaminari'
 gem "sass"
-gem "formtastic"
+gem "formtastic", '<=1.2.4'
 gem "coffee-script"
 gem "execjs"
 gem "therubyracer"
