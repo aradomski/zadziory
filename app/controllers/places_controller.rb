@@ -1,5 +1,4 @@
 class PlacesController < ApplicationController
-  include Regions
   load_and_authorize_resource
   # GET /places
   # GET /places.xml
