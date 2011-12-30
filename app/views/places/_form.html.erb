@@ -1,4 +1,4 @@
-<%= semantic_form_for @place do |f| %>
+<%= semantic_form_for @place, :html => { :multipart => true} do |f| %>
   <%= f.inputs do %>
     <%= f.input :is_active %>
     <%= f.input :owner %>
@@ -10,7 +10,8 @@
     <%= f.input :grade %>
     <%= f.input :telephone %>
     <%= f.input :country, :priority_countries => [:pl, :gb, :de]%>
-    <%= f.input :region %>
+   <%= f.input :region %>
+
     <%= f.input :city %>
     <%= f.input :district %>
     <%= f.input :street %>
@@ -37,6 +38,9 @@
     <%= f.input :has_terrace %>
     <%= f.input :has_lift %>
     <%= f.input :has_garden %>
+        <%= f.inputs :for => :images do |i| %>
+            <%= i.input :image, :as => :file %>
+        <% end %>
   <% end %>
 
   <%= f.buttons do %>

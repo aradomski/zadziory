@@ -10,7 +10,12 @@ gem 'devise'
 gem 'cancan'
 gem 'role_model'
 gem 'activeadmin'
+<<<<<<< HEAD
 gem 'meta_search'
+=======
+gem 'carrierwave'
+gem 'rmagick'
+>>>>>>> 342ef4d12fc0b8976fbb072194596ba79e103317
 
 # Gems used only for assets and not required
 # in production environments by default.

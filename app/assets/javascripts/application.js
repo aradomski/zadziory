@@ -22,4 +22,18 @@ $('alert').(function(){
 		});
 });
 });
+
+//resztki jakiejs walki
+   $(document).ready(function() {
+        $("#place_country_input").delegate("place_country","change", function() {
+        // make a POST call and replace the content
+        var country = $('select#place_country :selected').val();
+        if(country == "") country="";
+        $.ajax('/places/update_region_select/' + country, function(data){
+            $("#addressRegions").html(data);
+        })
+        return false;
+      });
+ });
 */
+

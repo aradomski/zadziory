@@ -2,6 +2,14 @@
 
 System wynajmowania mieszkań z możliwością ich oceniania oraz oceniania także najemców i wynajmujących.
 
+##Help
+    W razie problemów z gemem rmagick należy najpierw zainstalowac ImageMagick
+    sudo apt-get install imagemagick
+    Gdy to nie pomoze:
+    sudo apt-get install libmagick9-dev
+    bądź dla >=ubuntu 11.04 (nie sprawdzone)
+    apt-get install libmagickwand-dev
+
 ## Szczegóły użycia systemu - scenariusze użycia:
 #Odwiedzający: 
 	Wchodzi na stronę RentLuk i widzi formularz wyszukiwania mieszkania oraz 
