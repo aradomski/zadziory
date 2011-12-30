@@ -18,9 +18,9 @@ class PlacesController < ApplicationController
   # GET /places/new.xml
   def new
     @place = Place.new
-    3.times do
+
       @place.images.build
-    end
+
     respond_with(@place)
   end
 
@@ -45,6 +45,15 @@ class PlacesController < ApplicationController
   # PUT /places/1.xml
   def update
     @place = Place.find(params[:id])
+
+    if !@place.images.empty?
+    for image in @place.images
+      if params[:image_attributes][image.id.to_s][:remove_image] = 1
+        image.remove_image!
+        image.destroy
+      end
+    end
+    end
     @place.update_attributes(params[:place])
     respond_with(@place)
   end
@@ -53,6 +62,10 @@ class PlacesController < ApplicationController
   # DELETE /places/1.xml
   def destroy
     @place = Place.find(params[:id])
+    for image in @place.images
+        image.remove_image!
+        image.destroy
+    end
     @place.destroy
     respond_with(@place)
   end
