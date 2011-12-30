@@ -1,22 +1,24 @@
 <% title "All places" %>
 
-
 <article class="index">
+
+<div class="search">
+	<%= render :partial => 'search' %>
+</div>
 
 <div id="places">
 	<%= render :partial => 'place', :collection => @places %>
+	
+	<% if can? :create, Place %>
+	<div class="link">
+		<%= link_to 'New Place', new_place_path, class: "btn primary" %>
+	</div>
+	<% end %>
+	
 </div>
 
 </article>
 
- <aside>
-			Mega wypaśny ajaxowany formularz szukania tutaj!
- </aside>
 
-<% if can? :create, Place %>
-<div class="link">
-  <%= link_to 'New Place', new_place_path, class: "btn primary" %>
-</div>
-<% end %>
 
 

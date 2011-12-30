@@ -1,0 +1,17 @@
+<%= form_for @search do |f| %>
+  <p>
+    <%= f.label :city_contains %>
+    <%= f.text_field :city_contains %>
+  </p>
+  <p>Prize min:</p>
+  <p>
+    <!-- <%= f.label :price_min_gte, "Price min from" %> -->
+    <!-- błagam ,niech ktoś ogarnie czemu zmiana rozmiaru textfielda nie dziala ;(-->
+    from <%= f.text_field :price_min_gte, :maxlength => 5, :size => 10 %> 
+   </p>
+   <p>
+     <!-- <%= f.label :price_min_lte, "to" %> -->
+    to <%= f.text_field :price_min_lte,:maxlength => 5, :size => 10 %>
+ </p>
+  <p class="button"><%= f.submit "Search" %></p>
+<% end %>

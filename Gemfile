@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -10,8 +10,19 @@ gem 'devise'
 gem 'cancan'
 gem 'role_model'
 gem 'activeadmin'
+gem 'meta_search'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'responders'
+gem 'kaminari'
+gem 'sass'
+gem 'formtastic', '<=1.2.4'
+gem 'coffee-script'
+gem 'execjs'
+gem 'therubyracer'
+gem 'localized_country_select'
+gem 'hpricot'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,14 +48,6 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-gem 'responders'
-gem 'kaminari'
-gem "sass"
-gem "formtastic", '<=1.2.4'
-gem "coffee-script"
-gem "execjs"
-gem "therubyracer"
-gem "localized_country_select"
-gem "hpricot"
-gem "wirble", :group => :development
-gem "hirb", :group => :development
+
+gem 'wirble', :group => :development
+gem 'hirb', :group => :development

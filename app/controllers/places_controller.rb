@@ -3,8 +3,10 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.xml
   def index
-    @places = Place.all
-    respond_with(@places)
+    #@places = Place.all
+    #respond_with(@places)
+	@search = Place.search(params[:search])
+	@places = @search.all
   end
 
   # GET /places/1
