@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  include Regions
   load_and_authorize_resource
   # GET /places
   # GET /places.xml
@@ -18,6 +19,9 @@ class PlacesController < ApplicationController
   # GET /places/new.xml
   def new
     @place = Place.new
+    3.times do
+      @place.images.build
+    end
     respond_with(@place)
   end
 
@@ -53,4 +57,11 @@ class PlacesController < ApplicationController
     @place.destroy
     respond_with(@place)
   end
+
+=begin
+  def update_region_select
+     @regions = regions_select(params[:country]) unless params[:country].blank?
+    render :partial => "regions", :locals => { :regions => @regions }
+  end
+=end
 end
