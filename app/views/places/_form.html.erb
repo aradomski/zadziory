@@ -2,10 +2,8 @@
   <%= f.inputs do %>
     <%= f.input :is_active %>
     <%= f.input :owner %>
-<!--    <%= f.input :availability_from %>
-    <%= f.input :availability_to %>-->
-    Availability from: <%= f.datepicker 'availability_from' %>
-    Availability to:   <%= f.datepicker 'availability_to' %>
+    availability_from <%= f.text_field :availability_from , :class => "date_stealer" %> <br>
+    availability_to <%= f.text_field :availability_to,  :class => "date_stealer" %>
     <%= f.input :price_min %>
     <%= f.input :price_max %>
     <%= f.input :deposit %>

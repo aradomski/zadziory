@@ -4,14 +4,16 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui
 //= require_tree .
 
+$(document).ready(function() {
+	$(function() {
+		$(".date_stealer").datepicker($.datepicker.regional['pl']);
+	});
+});
 
 // trza sie przyjrzec, skumać ajax w railsie
-$(document).ready(function() {
+/*$(document).ready(function() {
 $('alert').(function(){			
 		$(this).fadeIn('slow');
 		$(this).css('color','#CC0000');
@@ -20,3 +22,4 @@ $('alert').(function(){
 		});
 });
 });
+*/
