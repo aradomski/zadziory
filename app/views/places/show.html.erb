@@ -9,7 +9,7 @@
     <span class="name">Images</span>
     <% for image in @place.images %>
         <div class="image">
-          <%= image_tag image.image_url.to_s %>
+          <%= image_tag image.image_url(:medium).to_s %>
         </div>
 
    <% end %>
