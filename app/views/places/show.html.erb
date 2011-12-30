@@ -5,15 +5,19 @@
 <% end -%>
 
 <article class="single">
-  <div class="images">
-    <span class="name">Images</span>
-    <% for image in @place.images %>
-        <div class="image">
-          <%= image_tag image.image_url(:medium).to_s %>
-        </div>
+  <% if @place.images.empty?  %>
+      <div class="images">
+        <span class="name">Images</span>
 
-   <% end %>
-  </div>
+        <% for image in @place.images %>
+            <div class="image">
+              <%= image_tag image.image_url(:medium).to_s %>
+            </div>
+
+       <% end %>
+
+      </div>
+  <% end %>
   <div class="attribute">
     <span class="name">Is active</span>
     <span class="value"><%= @place.is_active %></span>
