@@ -63,11 +63,11 @@
 			<% flash.each do |name, msg| %>
 				<%= content_tag :div, msg, :id => "#{name}" %>
 			<% end %>
-          <div class="span10"><!-- 10 * 60 = 600 px -->
+     <!--      <div class="span10">10 * 60 = 600 px -->
             <%= yield %>
-          </div>
+        <!--  </div>
          
-          <!--
+          
           <div class="span4">
             <h3>[secondary content]</h3>
             <!--

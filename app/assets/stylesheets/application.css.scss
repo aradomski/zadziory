@@ -15,6 +15,18 @@
 
 /* MIESZKANIE - ELEMENT W INDEX */
 
+#places{
+	float:left;
+	margin-left:20px;
+	width:620px;
+}
+
+.search{
+	float:right;
+	border-left:1px solid #eee;
+	padding:10px;
+}
+
 .place {
 	margin-bottom: 7px;
 	border: 2px solid #0776A0;
@@ -58,27 +70,28 @@
  margin-left:20px;
  margin-top:10px;
  font-size:17px;
- width:480px;
+ width:500px;
 }
 
 .people{
  background-color:#DDDDDD;
  margin-left:60px;
  font-size:17px;
- width:440px;
+ width:460px;
 }
 
 .dates{
  background-color:#DDDDDD;
  margin-left:100px;
  font-size:17px;
- width:400px;
+ width:420px;
+ text-align:center;
 }
 
 /* Linki */
 
 .options{
-	margin-left:460px;
+	margin-left:480px;
 }
 
 .options a{
