@@ -10,6 +10,12 @@ $(document).ready(function() {
 	$(function() {
 		$(".date_stealer").datepicker($.datepicker.regional['pl']);
 	});
+	
+	$(function() {
+		$( "input:submit, a, button", ".knob" ).button();
+		$( "a", ".knob" ).click(function() { return false; });
+	});
+	
 });
 
 // trza sie przyjrzec, skumać ajax w railsie

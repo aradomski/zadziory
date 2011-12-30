@@ -1,21 +1,33 @@
-<% title "Sign up" %>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<% title "Register" %>
+<div id="register">
+<%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+	<%= f.inputs do %>
 	
-  <%= render :partial => "devise/shared/roles"%>
+	<%= f.input :email, :as => :email, :input_html => { :size => 30 } %>
+
+	<%= f.input :password, :as => :password, :input_html => { :size => 30 } %>
+
+	<%= f.input :password_confirmation, :as => :password , :input_html => { :size => 30 } %>
 	
-  <div><%= f.submit "Sign up" %></div>
+	<div class="radio_roles">
+		<%= render :partial => "devise/shared/roles"%>
+	</div>
+
+	<%end%>
+	
+	<span class="rr">
+	<fieldset class="knob">
+	<%= f.buttons do %>
+		<%= f.commit_button :label => "Register" %>
+	<% end %>
+	</fieldset>
+	</span>
+	
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+<div class="shared_links">
+	<%= render :partial => "devise/shared/links" %>
+</div>
 
+</div>

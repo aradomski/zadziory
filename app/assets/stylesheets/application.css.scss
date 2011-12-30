@@ -1,5 +1,6 @@
 /*
- 
+ = require formtastic
+ = require formtastic_changes
  = require bootstrap
  = require_tree ./ui-themes
  = require_self
@@ -143,3 +144,38 @@ aside {
   border-left: 2px solid #FF9540;
 }
 
+/* guzik */
+
+/* formularz rejestracji */
+
+#register{
+	padding:10px;
+	width:430px;
+	margin-left:auto;
+	margin-right:auto;
+	border: 1px solid #eee;
+}
+
+.radio_roles{
+	width:150px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.rr{
+	padding:15px;
+	float:right;
+}
+
+.shared_links {
+	font-size:15px;
+}
+
+.shared_links a{
+	color:#FF9560;
+}
+
+.shared_links a:hover{
+	color:#FF7100;
+	text-decoriation:underline;
+}
