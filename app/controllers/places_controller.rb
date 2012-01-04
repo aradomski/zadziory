@@ -49,14 +49,7 @@ class PlacesController < ApplicationController
   def update
     @place = Place.find(params[:id])
 
-    if !@place.images.empty?
-    for image in @place.images
-      if params[:image_attributes][image.id.to_s][:remove_image] = 1
-        image.remove_image!
-        image.destroy
-      end
-    end
-    end
+
     @place.update_attributes(params[:place])
     respond_with(@place)
   end
