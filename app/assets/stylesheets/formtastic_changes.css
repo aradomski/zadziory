@@ -12,7 +12,5 @@ The following style may be *conditionally* included for improved support on olde
 form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 
 --------------------------------------------------------------------------------------------------*/
-form.formtastic input { height:25px; padding-left:5px; }
+form.formtastic input { height:25px; }
 form.formtastic input, form.formtastic textarea, form.formtastic select { font-size:85%; }
-
-form.formtastic fieldset > ol > li label {  }

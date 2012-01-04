@@ -22,10 +22,11 @@
 	width:620px;
 }
 
-.search{
+.seearch{
 	float:right;
 	border-left:1px solid #eee;
-	padding:10px;
+	width:300px;
+	padding: 7px;
 }
 
 .placee {
@@ -172,11 +173,10 @@ aside {
 }
 
 .shared_links a{
-	color:#FF9560;
+	font-size:14px;
 }
 
 .shared_links a:hover{
-	color:#FF7100;
 	text-decoriation:underline;
 }
 

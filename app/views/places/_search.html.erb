@@ -1,17 +1,17 @@
-<%= form_for @search do |f| %>
-  <p>
-    <%= f.label :city_contains %>
-    <%= f.text_field :city_contains %>
-  </p>
-  <p>Prize min:</p>
-  <p>
-    <!-- <%= f.label :price_min_gte, "Price min from" %> -->
-    <!-- błagam ,niech ktoś ogarnie czemu zmiana rozmiaru textfielda nie dziala ;(-->
-    from <%= f.text_field :price_min_gte, :maxlength => 5, :size => 10 %> 
-   </p>
-   <p>
-     <!-- <%= f.label :price_min_lte, "to" %> -->
-    to <%= f.text_field :price_min_lte,:maxlength => 5, :size => 10 %>
- </p>
-  <p class="button"><%= f.submit "Search" %></p>
+<%= semantic_form_for @search do |f| %>
+	<%= f.inputs do %>
+
+    <%= f.input :city_contains, :input_html => { :size => 20 } %>
+
+	<%= f.input :price_min_gte, :label => "Cena od", :input_html => { :size => 5 } %>
+	<%= f.input :price_min_lte, :label => "Cena do", :input_html => { :size => 5 } %>
+	
+	<% end %>
+	
+	<fieldset class="knob">
+	<%= f.buttons do %>
+		<%= f.commit_button :label => "Szukaj" %>
+	<% end %>
+	</fieldset>
+	
 <% end %>
