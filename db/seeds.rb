@@ -38,4 +38,4 @@ User.create :email => 'user@rentluk.pl',
 #  :created_at=>'2012-01-04', :updated_at=>'2012-01-04', :user_id => '2', :surface => '133'
 
 ActiveRecord::Fixtures.create_fixtures("#{Rails.root}/test/fixtures", "places")
-puts "dodano mieszkania, jeśli chcesz dodac wiecej /test/fixtures/places.yml"
+puts "dodano mieszkania, jesli chcesz dodac wiecej /test/fixtures/places.yml"
