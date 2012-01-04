@@ -22,7 +22,7 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'localized_country_select'
 gem 'hpricot'
-
+gem 'validates_timeliness'
 
 # Gems used only for assets and not required
 # in production environments by default.
