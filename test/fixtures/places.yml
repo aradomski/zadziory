@@ -11,7 +11,6 @@ one:
   grade: 1.5
   telephone: MyString
   country: MyString
-  county: MyString
   city: MyString
   district: MyString
   street: MyString
@@ -44,12 +43,11 @@ two:
   availability_from: 2011-12-15
   availability_to: 2011-12-15
   price_min: 9.99
-  price_max: 9.99
+  price_max: 123.23
   deposit: 9.99
   grade: 1.5
   telephone: MyString
   country: MyString
-  county: MyString
   city: MyString
   district: MyString
   street: MyString
