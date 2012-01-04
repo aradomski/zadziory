@@ -39,7 +39,10 @@
     <%= f.input :has_lift %>
     <%= f.input :has_garden %>
         <%= f.inputs :for => :images do |i| %>
+
             <%= i.input :image, :as => :file %>
+            <%= i.input :image_cache, :as => :hidden %>
+            Remove? :<%= i.check_box :remove_image! %>
         <% end %>
   <% end %>
 
