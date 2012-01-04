@@ -43,7 +43,7 @@
             <%= i.input :image, :as => :file %>
             <%= i.input :image_cache, :as => :hidden %>
               <% unless i.object.new_record? %>
-                    Remove? :<%= i.check_box :remove_image! %>
+                    Remove? :<%= i.check_box :remove_image %>
               <% end %>
 
         <% end %>

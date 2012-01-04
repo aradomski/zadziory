@@ -52,7 +52,14 @@ class PlacesController < ApplicationController
   # PUT /places/1.xml
   def update
     @place = Place.find(params[:id])
-
+    params[:place][:images_attributes].each_key { |key|
+     if params[:place][:images_attributes][key.to_sym][:remove_image] == "1"
+       @image = Image.find(params[:place][:images_attributes][key.to_sym][:id])
+       @image.remove_image!
+       @image.destroy
+       params[:place][:images_attributes].delete(key.to_sym)
+     end
+    }
 
     @place.update_attributes(params[:place])
     respond_with(@place)
