@@ -30,6 +30,10 @@ class PlacesController < ApplicationController
   # GET /places/1/edit
   def edit
     @place = Place.find(params[:id])
+    if @place.images.empty?
+      @place.images.build
+    end
+    respond_with(@place)
   end
 
   # POST /places

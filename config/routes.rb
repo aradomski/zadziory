@@ -8,9 +8,6 @@ Zadziory::Application.routes.draw do
 
   resources :places
 
-  match "places/update_region_select/:country" => "places#update_region_select"
-
-
   resources :histories
 
   devise_for :users

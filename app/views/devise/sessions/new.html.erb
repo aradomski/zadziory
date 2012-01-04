@@ -1,17 +1,29 @@
-<% title "Sign in" %>
+<% title "Login" %>
+<div id="register">
+<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+	<%= f.inputs do %>
+	
+	<%= f.input :email, :as => :email, :input_html => { :size => 30 } %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+	<%= f.input :password, :as => :password, :input_html => { :size => 30 } %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+	<% if devise_mapping.rememberable? -%>
+		<%= f.input :remember_me , :as => :boolean %> 
+	<% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
+	<% end %>
+  
+	<span class="rr">
+	<fieldset class="knob">
+	<%= f.buttons do %>
+		<%= f.commit_button :label => "Zaloguj się!" %>
+	<% end %>
+	</fieldset>
+	</span>
+
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>
+<div class="shared_links">
+	<%= render :partial => "devise/shared/links" %>
+</div>
+</div>
