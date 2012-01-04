@@ -1,34 +1,34 @@
+<div id="form">
 <%= semantic_form_for @place, :html => { :multipart => true} do |f| %>
   <%= f.inputs do %>
-    <%= f.input :is_active %>
-    <%= f.input :owner %>
-    availability_from <%= f.text_field :availability_from , :class => "date_stealer" %> <br>
-    availability_to <%= f.text_field :availability_to,  :class => "date_stealer" %>
-    <%= f.input :price_min %>
-    <%= f.input :price_max %>
-    <%= f.input :deposit %>
-    <%= f.input :grade %>
-    <%= f.input :telephone %>
+    
+    <%= f.input :owner ,  :input_html => { :size => 30 } , :label => "Owner" %>
+    <%= f.input :availability_from, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
+    <%= f.input :availability_to, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
+    <%= f.input :price_min, :input_html => { :size => 5 } %>
+    <%= f.input :price_max, :input_html => { :size => 5 }%>
+    <%= f.input :deposit, :input_html => { :size => 5 } %>
+    <%= f.input :grade , :input_html => { :size => 5 }%>
+    <%= f.input :telephone, :input_html => { :size => 30 } %>
     <%= f.input :country, :priority_countries => [:pl, :gb, :de]%>
-   <%= f.input :region %>
-
-    <%= f.input :city %>
-    <%= f.input :district %>
-    <%= f.input :street %>
-    <%= f.input :place_nr %>
-    <%= f.input :flat_nr %>
+	<%= f.input :region,:as => :select, :collection => REGIONS_PL.sort %>
+    <%= f.input :city, :input_html => { :size => 30 } %>
+    <%= f.input :district, :input_html => { :size => 30 } %>
+    <%= f.input :street, :input_html => { :size => 30 } %>
+    <%= f.input :place_nr, :input_html => { :size => 3 }  %>
+    <%= f.input :flat_nr, :input_html => { :size => 3 } %>
     <%= f.input :coordinates %>
-    <%= f.input :place_type %>
-    <%= f.input :floor_nr %>
-    <%= f.input :nr_of_floors %>
-    <%= f.input :nr_of_rooms %>
-    <%= f.input :surface %>
-    <%= f.input :build_year %>
-    <%= f.input :heating_type %>
-    <%= f.input :people_max %>
-    <%= f.input :for_who %>
-    <%= f.input :min_length_lease %>
-    <%= f.input :type_length_lease %>
+    <%= f.input :place_type,:as => :select, :collection => PLACE_TYPE.sort %>
+    <%= f.input :floor_nr, :input_html => { :size => 3 } %>
+    <%= f.input :nr_of_floors, :input_html => { :size => 3 } %>
+    <%= f.input :nr_of_rooms, :input_html => { :size => 3 } %>
+    <%= f.input :surface, :input_html => { :size => 3 } %>
+    <%= f.input :build_year, :input_html => { :size => 3 } %>
+    <%= f.input :heating_type, :input_html => { :size => 30 } %>
+    <%= f.input :people_max,  :input_html => { :size => 3 } %>
+    <%= f.input :for_who, :input_html => { :size => 30 } %>
+    <%= f.input :min_length_lease,  :input_html => { :size => 30 } %>
+    <%= f.input :type_length_lease, :input_html => { :size => 30 } %>
     <%= f.input :description %>
     <%= f.input :has_balcony %>
     <%= f.input :has_garage %>
@@ -42,8 +42,9 @@
             <%= i.input :image, :as => :file %>
         <% end %>
   <% end %>
-
+  <%= f.input :is_active %>
   <%= f.buttons do %>
     <%= f.commit_button %>
   <% end %>
 <% end %>
+</div>
