@@ -1,4 +1,9 @@
 class HistoriesController < ApplicationController
+ def init
+     self.rate_item  ||= 5.0    
+     self.rate_tenant  ||= 5.0    
+     self.rate_owner  ||= 5.0    
+  end
   # GET /histories
   # GET /histories.xml
   def index
