@@ -39,7 +39,9 @@
     <%= f.input :has_lift %>
     <%= f.input :has_garden %>
         <%= f.inputs :for => :images do |i| %>
-
+               <% unless @place.images.empty? %>
+               <%= image_tag(@place.images.i.image_url(:medium).to_s) %>
+            <% end %>
 
             <%= i.input :image, :as => :file %>
             <%= i.input :image_cache, :as => :hidden %>
