@@ -1,0 +1,28 @@
+<% title "All authentications" %>
+
+<% @authentications.each do |authentication| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">User</span>
+    <span class="value"><%= authentication.user_id %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Provider</span>
+    <span class="value"><%= authentication.provider %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Uid</span>
+    <span class="value"><%= authentication.uid %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', authentication, class: "btn" %>
+    <%= link_to 'Edit', edit_authentication_path(authentication), class: "btn" %>
+    <%= link_to 'Destroy', authentication, confirm: 'Are you sure?',
+          method: :delete, class: "btn danger" %>
+  </div>
+</article>
+<% end %>
+
+<div class="link">
+  <%= link_to 'New Authentication', new_authentication_path, class: "btn primary" %>
+</div>

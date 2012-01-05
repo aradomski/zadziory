@@ -1,5 +1,7 @@
 Zadziory::Application.routes.draw do
 
+  resources :authentications
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -16,8 +18,11 @@ Zadziory::Application.routes.draw do
   :sign_in =>  "login",
   :sign_up =>  "register",
   :sign_out => "logout"
-}
+  }
   
+  devise_for :users, :controllers => {:registrations => 'registrations'}
+  
+  match '/auth/:provider/callback' => 'authentications#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -27,13 +27,15 @@
 			<b>to: </b><%= place.availability_to %>
 		</div>
 		<div class="options">
-		<% if can? :update, place %>
+		<% if can? :read, place %>
 			<%= link_to "Show", place%>
+		<% end %>
+		<% if can? :update, place %>		
 				<%= link_to "Edit", edit_place_path(place) %>
-			<% end %>
-			<% if can? :destroy, place %>
-				<%= link_to "Delete", place, :confirm => 'Are you sure?', :method => :delete %>
-			<% end %>
+		<% end %>
+		<% if can? :destroy, place %>
+			<%= link_to "Delete", place, :confirm => 'Are you sure?', :method => :delete %>
+		<% end %>
 		</div>
 	
 	</div>
