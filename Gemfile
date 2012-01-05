@@ -23,6 +23,7 @@ gem 'therubyracer'
 gem 'localized_country_select'
 gem 'hpricot'
 gem 'validates_timeliness'
+gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git' , :tag => 'v0.3.0.rc3'
 
 # Gems used only for assets and not required
 # in production environments by default.

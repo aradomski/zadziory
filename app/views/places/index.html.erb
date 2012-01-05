@@ -1,5 +1,10 @@
 <% title "All places" %>
-
+<% if can? :create, Place %>
+	<div class="link">
+		<%= link_to 'New Place', new_place_path, class: "btn primary" %>
+		 <%= link_to 'Pokaż wszystko', places_path, :remote => true, class: "btn primary" %>
+	</div>
+	<% end %>
 <article class="index">
 
 <div class="seearch">
@@ -9,12 +14,8 @@
 <div id="places">
 	<%= render :partial => 'place', :collection => @places %>
 	
-	<% if can? :create, Place %>
-	<div class="link">
-		<%= link_to 'New Place', new_place_path, class: "btn primary" %>
-	</div>
-	<% end %>
 	
+	<%= params[:search] %>
 </div>
 
 </article>

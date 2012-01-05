@@ -32,6 +32,7 @@
 }
 
 .placee {
+	padding-bottom:8px;
 	margin-bottom: 7px;
 	border: 2px solid #0776A0;
 	min-height:100px;
@@ -152,8 +153,8 @@ aside {
 #register{
 	padding:10px;
 	width:430px;
-	margin-left:auto;
-	margin-right:auto;
+	float:left;
+	margin-left:50px;
 	border: 1px solid #eee;
 }
 
@@ -164,8 +165,8 @@ aside {
 }
 
 .rr{
-	padding:15px;
 	float:right;
+	padding:3px;
 }
 
 .shared_links {
@@ -180,6 +181,12 @@ aside {
 	text-decoriation:underline;
 }
 
+.social_logins {
+	position:relative;
+	top:50px;
+	border-left: 2px solid #eee;
+}
+
 /* formularz */
 
 #form {
@@ -191,4 +198,17 @@ aside {
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
+}
+
+/* dropshadow dla obrazka */
+
+.imagedropshadow {
+	padding: 5px;
+}
+
+a:hover img.imagedropshadow {
+	-moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+	box-shadow: 1px 1px 5px #999;
+	-moz-border-radius: 10px;
 }

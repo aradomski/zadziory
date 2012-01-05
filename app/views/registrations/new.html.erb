@@ -6,10 +6,11 @@
 	
 	<%= f.input :email, :as => :email, :input_html => { :size => 30 } %>
 
+<% if @user.password_required? %>
 	<%= f.input :password, :as => :password, :input_html => { :size => 30 } %>
 
 	<%= f.input :password_confirmation, :as => :password , :input_html => { :size => 30 } %>
-	
+<% end %>	
 	<div class="radio_roles">
 		<%= render :partial => "devise/shared/roles"%>
 	</div>
@@ -29,10 +30,5 @@
 <div class="shared_links">
 	<%= render :partial => "devise/shared/links" %>
 </div>
-</div>
 
-<aside class="social_logins">
-	<p> Jeśli <b>nie jesteś właścicielem</b> i interesuje Cię tylko przeglądanie ofert, możesz błyskawicznie
-		zalogować się z pomocą jednego z portali społecznościowych.</p>
-	<a href="/auth/facebook"><%=image_tag("facebook_48.png", :alt=>"Login with Facebook", :class=>"imagedropshadow")%></a>
-</aside>
+</div>
