@@ -21,9 +21,9 @@ class PlacesController < ApplicationController
   # GET /places/new.xml
   def new
     @place = Place.new
-
+	2.times do
       @place.images.build
-
+	end
     respond_with(@place)
   end
 
@@ -31,7 +31,9 @@ class PlacesController < ApplicationController
   def edit
     @place = Place.find(params[:id])
     if @place.images.empty?
+	2.times do
       @place.images.build
+    end
     end
     respond_with(@place)
   end

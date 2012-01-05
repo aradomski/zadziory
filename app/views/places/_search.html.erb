@@ -9,7 +9,7 @@
 	<%= f.input :grade_gte, :label => "Ocena od", :input_html => { :size => 5 } %>
 	<%= f.input :grade_lte, :label => "Ocena do", :input_html => { :size => 5 } %>
 	
-	<%= f.input :place_type_equals,:label => "Rodzaj", :as => :select, :collection => PLACE_TYPE.sort %>
+	<%= f.input :place_type_contains,:label => "Rodzaj", :as => :select, :collection => PLACE_TYPE.sort %>
 	
 	<!--	Nie działa ? --> <!--
 	<%= f.input :country_equals, :priority_countries => [:pl, :gb, :de]%>

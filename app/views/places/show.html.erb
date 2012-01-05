@@ -6,14 +6,14 @@
 
 <article class="single">
   <% unless @place.images.empty?  %>
-      <div class="images">
-        <span class="name">Images</span>
-
+  
+  <div id="gal" class="imageflow">
+  
         <% for image in @place.images %>
-            <div class="image">
-              <%= image_tag image.image_url(:medium).to_s %>
-            </div>
-
+            
+            <%= image_tag image.image_url().to_s, :longdesc => image.image_url().to_s %>
+            <img src="/uploads/image/image/1/ObviousTroll_answer_9_xlarge.jpeg" longdesc="/uploads/image/image/1/ObviousTroll_answer_9_xlarge.jpeg" alt="Obvioustroll_answer_9_xlarge"   />
+            
        <% end %>
 
       </div>
