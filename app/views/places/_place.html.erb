@@ -6,8 +6,8 @@
 		
 		<% if place.is_active %>
 			<div class="activity">
-			<%=image_tag("active.png", :alt=>"Place offer is active!", :width=>"25", :height=>"25")%>
-			<span class="aaa">Place offer is active!</span>
+			<%=image_tag("active.png", :alt=>"Place Offer is active!", :width=>"25", :height=>"25")%>
+			<span class="aaa">Offer is active!</span>
 			</div>
 		<% end %>
 		<div class="grade">Average: <%= place.grade %></div>
@@ -27,8 +27,8 @@
 			<b>to: </b><%= place.availability_to %>
 		</div>
 		<div class="options">
+		<% if can? :update, place %>
 			<%= link_to "Show", place%>
-			<% if can? :update, place %>
 				<%= link_to "Edit", edit_place_path(place) %>
 			<% end %>
 			<% if can? :destroy, place %>
