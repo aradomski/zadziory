@@ -40,12 +40,17 @@
     <%= f.input :has_garden %>
 	<%= f.input :is_active %>
         <%= f.inputs :for => :images do |i| %>
+              <% unless @place.images.empty? %>
+               <%= image_tag(@place.images['#%i'.to_i].image_url(:thumb).to_s) %>
+                  <% unless i.object.new_record? %>
+                    <%= i.input :remove_image, :as => :boolean %>
+                   <% end %>
+            <% end %>
+
 
             <%= i.input :image, :as => :file %>
             <%= i.input :image_cache, :as => :hidden %>
-              <% unless i.object.new_record? %>
-              <%= i.input :remove_image, :as => :boolean %>
-              <% end %>
+
 
         <% end %>
   <% end %>

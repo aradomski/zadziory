@@ -1463,7 +1463,7 @@ domReady(function()
 		Highslide_2.init({ ImageFlowID: 'gal',
 					reflections: false, 
                    reflectionP: 0.0,
-                   startAnimation: true ,
+                   startAnimation: false ,
                    captions: false,
                    slideshow: true,
                    slideshowSpeed: 3000,

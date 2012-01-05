@@ -11,8 +11,7 @@
   
         <% for image in @place.images %>
             
-            <%= image_tag image.image_url().to_s, :longdesc => image.image_url().to_s %>
-            <img src="/uploads/image/image/1/ObviousTroll_answer_9_xlarge.jpeg" longdesc="/uploads/image/image/1/ObviousTroll_answer_9_xlarge.jpeg" alt="Obvioustroll_answer_9_xlarge"   />
+            <%= image_tag image.image_url.to_s, :longdesc => image.image_url.to_s %>
             
        <% end %>
 
