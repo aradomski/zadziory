@@ -7,7 +7,7 @@
         view: "Widok"
         edit: "Edytuj"
         delete: "Usuń"
-        delete_confirmation: "Jesteś pewien, że chcesz to usunąć?"
+        delete_confirmation: "Czy jesteś pewien, że chcesz to usunąć?"
         new_model: "Nowy %{model}"
         edit_model: "Edytuj %{model}"
         delete_model: "Usuń %{model}"
