@@ -38,8 +38,8 @@
     <%= f.input :has_terrace %>
     <%= f.input :has_lift %>
     <%= f.input :has_garden %>
+	<%= f.input :is_active %>
         <%= f.inputs :for => :images do |i| %>
-
 
             <%= i.input :image, :as => :file %>
             <%= i.input :image_cache, :as => :hidden %>
@@ -49,7 +49,7 @@
 
         <% end %>
   <% end %>
-  <%= f.input :is_active %>
+  
   <%= f.buttons do %>
     <%= f.commit_button %>
   <% end %>

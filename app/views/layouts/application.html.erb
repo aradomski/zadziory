@@ -60,9 +60,11 @@
           <%= content_tag :h1, yield(:title) if show_title? %>
         </div>
         <div class="row">
-			<% flash.each do |name, msg| %>
-				<%= content_tag :div, msg, :id => "#{name}" %>
-			<% end %>
+			
+				<% flash.each do |name, msg| %>
+					<%= content_tag :div, msg, :id => "#{name}" %>
+				<% end %>
+					
      <!--      <div class="span10">10 * 60 = 600 px -->
             <%= yield %>
         <!--  </div>
