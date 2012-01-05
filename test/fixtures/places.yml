@@ -2,74 +2,76 @@
 
 one:
   is_active: false
-  owner: MyString
-  availability_from: 2011-12-15
-  availability_to: 2011-12-15
-  price_min: 9.99
-  price_max: 9.99
-  deposit: 9.99
-  grade: 1.5
-  telephone: MyString
-  country: MyString
-  city: MyString
-  district: MyString
-  street: MyString
-  place_nr: 1
-  flat_nr: 1
-  coordinates: MyString
-  place_type: MyString
-  floor_nr: 1
-  nr_of_floors: 1
-  nr_of_rooms: 1
-  build_year: 1
-  heating_type: MyString
-  people_max: 1
-  for_who: MyString
-  min_length_lease: 1
-  type_length_lease: 1
-  description: MyText
-  has_balcony: false
-  has_garage: false
-  has_basement: false
-  has_parking: false
-  has_internet: false
-  has_terrace: false
-  has_lift: false
-  has_garden: false
-
-two:
-  is_active: false
-  owner: MyString
+  owner: wlasciciel
   availability_from: 2011-12-15
   availability_to: 2011-12-15
   price_min: 9.99
   price_max: 123.23
-  deposit: 9.99
-  grade: 1.5
-  telephone: MyString
-  country: MyString
-  city: MyString
-  district: MyString
-  street: MyString
-  place_nr: 1
-  flat_nr: 1
-  coordinates: MyString
-  place_type: MyString
-  floor_nr: 1
-  nr_of_floors: 1
-  nr_of_rooms: 1
-  build_year: 1
-  heating_type: MyString
-  people_max: 1
-  for_who: MyString
-  min_length_lease: 1
-  type_length_lease: 1
-  description: MyText
-  has_balcony: false
+  deposit: 12.42
+  grade: 4.3
+  telephone: 189-989-699
+  country: Kraj
+  city: Miasto
+  district: Dzielnia
+  street: Ulica
+  place_nr: 13
+  flat_nr: 43
+  coordinates: coordynaty
+  place_type: typMieszkania
+  floor_nr: 10
+  nr_of_floors: 5
+  nr_of_rooms: 3
+  build_year: 1990
+  heating_type: TypOgrzewania
+  people_max: 4
+  for_who: DlaKogo
+  min_length_lease: 10
+  type_length_lease: 3
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, eros non molestie molestie, lorem orci pretium risus, ut sagittis eros lacus id libero. Maecenas ornare ultrices urna, eget adipiscing dui posuere et. Sed augue orci, laoreet fringilla tempor quis, aliquet ut lectus. Maecenas pretium neque pellentesque nisi vehicula convallis. Maecenas convallis est nec velit pretium sed molestie sem hendrerit. Pellentesque adipiscing odio a sapien porttitor ac vehicula nulla varius. Sed pulvinar metus dignissim est feugiat nec suscipit nunc adipiscing. Sed vulputate risus ac lectus suscipit eu tempus enim pretium.
+  has_balcony: true
   has_garage: false
-  has_basement: false
+  has_basement: true
   has_parking: false
-  has_internet: false
+  has_internet: true
   has_terrace: false
-  has_lift: false
+  has_lift: true
   has_garden: false
+  surface: 12.4
+
+two:
+  is_active: true
+  owner: Adam
+  availability_from: 2012-01-15
+  availability_to: 2012-02-15
+  price_min: 80.5
+  price_max: 100.5
+  deposit: 300.0
+  grade: 9.78
+  telephone: 692-390-767
+  country: Polska
+  city: Gdynia
+  district: Wzgorze
+  street: Krasickiego
+  place_nr: 24
+  flat_nr: 43
+  coordinates: koordynaty
+  place_type: mieszkanie
+  floor_nr: 6
+  nr_of_floors: 10
+  nr_of_rooms: 3
+  build_year: 1985
+  heating_type: co
+  people_max: 4
+  for_who: KAżdego
+  min_length_lease: 5
+  type_length_lease: 2
+  description: Fajne mieszkanie
+  has_balcony: true
+  has_garage: false
+  has_basement: true
+  has_parking: true
+  has_internet: true
+  has_terrace: false
+  has_lift: true
+  has_garden: false
+  surface: 32.32
