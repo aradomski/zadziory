@@ -4,10 +4,10 @@
 pl:
   errors:
     messages:
-      expired: "stracił ważność, wyślij zapytanie o nowy"
-      not_found: "nie znaleziono"
-      already_confirmed: "już został aktywowany, możesz się zalogować"
-      not_locked: "nie był zablokowany"
+      expired: "Stracił ważność, wyślij zapytanie o nowy"
+      not_found: "Nie znaleziono"
+      already_confirmed: "Już został aktywowany, możesz się zalogować"
+      not_locked: "Nie był zablokowany"
       not_saved:
         one: "%{resource} nie został zapisany z powodu jednego błędu:"
         other: "%{resource} nie został zapisany z powodu %{count} błędów:"
