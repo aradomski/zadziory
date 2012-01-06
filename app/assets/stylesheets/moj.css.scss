@@ -10,9 +10,11 @@ div.show{
 	height: 600px;
 	overflow-y: auto;
 	overflow-x: hidden;
+	
 }
 
 div.descripton{
-
-
+}
+span.full_descripton{
+	white-space: pre-wrap;
 }
