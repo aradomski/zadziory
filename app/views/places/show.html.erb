@@ -4,7 +4,7 @@
 <div id="notice"><%= notice %></div>
 <% end -%>
 
-<div class="show">
+
   <% unless @place.images.empty?  %>
   
   <div id="gal" class="imageflow">
@@ -17,6 +17,7 @@
 
       </div>
   <% end %>
+  <div class="show">
   <div class="attribute">
     <span class="name">Is active</span>
     <span class="value"><%= @place.is_active %></span>
@@ -129,9 +130,9 @@
     <span class="name">Type length lease</span>
     <span class="value"><%= @place.type_length_lease %></span>
   </div>
-  <div class="attribute">
-    <span class="name">Description</span>
-    <span class="value"><%= @place.description %></span>
+  <div class="descripton">
+    <h3>Rozwin opis</h3>
+    <span class="full_descripton"><%= @place.description %></span>
   </div>
   <div class="attribute">
     <span class="name">Has balcony</span>
