@@ -79,6 +79,12 @@ class PlacesController < ApplicationController
     respond_with(@place)
   end
 
+  def myPlaces
+	@search = Place.joins(:user).where("user_id == #{current_user.id}" ).search(params[:search])
+	@places = @search.all
+	render 'places/index'
+  end
+
 =begin
   def update_region_select
      @regions = regions_select(params[:country]) unless params[:country].blank?

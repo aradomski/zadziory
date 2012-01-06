@@ -3,7 +3,12 @@
 <article class="single">
 
  <div class="link">
-	<%= link_to 'Wszystkie mieszkania', places_path, class: "btn primary" %>
+	<% if can? :read , Place %>
+		<%= link_to 'Wszystkie miejsca', places_path, class: "btn primary" %>
+	<% end %>
+	<% if can? :myPlaces, Place %>
+		<%= link_to 'Twoje miejsca', myplaces_path , class: "btn primary" %>
+	<% end %>
  </div>
 
 </article>

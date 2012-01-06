@@ -48,11 +48,11 @@
           
 		<div class="pull-right">
 			 <% if user_signed_in? %>
-				Logged as <%= current_user.email %>. Not you?
+				Logged as <%= current_user.email %>. 
+				<%= link_to "Your panel", panel_path %>
 				<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 			<% else %>
 				<%= link_to "Login", new_user_session_path %>
-				or
 				<%= link_to "Register", new_user_registration_path %> 
 			<% end %>
 		</div>
