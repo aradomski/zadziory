@@ -18,6 +18,9 @@
       </div>
   <% end %>
   <div class="show">
+  <div class="availability">
+    <span class="value">Oferta aktywna od: <%= @place.availability_from %> do: <%= @place.availability_to %></span>
+  </div>
   <div class="attribute">
     <span class="name">Is active</span>
     <span class="value"><%= @place.is_active %></span>
@@ -25,14 +28,6 @@
   <div class="attribute">
     <span class="name">Owner</span>
     <span class="value"><%= @place.owner %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Availability from</span>
-    <span class="value"><%= @place.availability_from %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Availability to</span>
-    <span class="value"><%= @place.availability_to %></span>
   </div>
   <div class="attribute">
     <span class="name">Price min</span>
@@ -136,27 +131,13 @@
   </div>
   <div class="attribute">
     <span class="name">Balkon</span><% if(@place.has_balcony ) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
     <span class="name">Garaż</span><% if(@place.has_garage) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
     <span class="name">Piwnica</span><% if(@place.has_basement) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
-    <span class="name">Parking</span><% if(@place.has_parking) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
-    <span class="name">Internet</span><% if(@place.has_internet) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
-    <span class="name">Taras</span><% if(@place.has_terrace) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
-    <span class="name">Winda</span> <% if(@place.has_lift) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-  </div>
-  <div class="attribute">
-    <span class="name">Ogródek</span><% if(@place.has_garden) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Parking</span><% if(@place.has_parking) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Internet</span><% if(@place.has_internet) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Taras</span><% if(@place.has_terrace) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Winda</span> <% if(@place.has_lift) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Ogródek</span><% if(@place.has_garden) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
   </div>
   <div class="link">
     <% if current_user.has_role? :owner %>

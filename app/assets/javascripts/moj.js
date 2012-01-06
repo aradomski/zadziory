@@ -4,11 +4,11 @@
             if ($(this).text() == 'Rozwin opis') {
 				//alert("rozwijam");
                 $(this).text('Zwin opis');
-                $('.descripton span').show();
+                $('.descripton span').slideDown('slow');
             } else {
 				//alert("zwijam");
                 $(this).text('Rozwin opis');
-                $('.descripton span').hide();
+                $('.descripton span').slideUp('slow');
             }
         });
     });
