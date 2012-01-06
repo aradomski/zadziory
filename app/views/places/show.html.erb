@@ -166,7 +166,12 @@
     <span class="value"><%= @place.has_garden %></span>
   </div>
   <div class="link">
-    <%= link_to 'Edit', edit_place_path(@place), class: "btn primary" %>
+    <% if current_user.has_role? :owner %>
+        <%= link_to 'Edit', edit_place_path(@place), class: "btn primary" %>
+    <% end %>
+    <% if current_user.has_role? :tenant %>
+        <!--tu bedzie link do buttona wynajmu in progress-->
+    <% end %>
     <%= link_to 'Back', places_path, class: "btn primary" %>
   </div>
 </article>
