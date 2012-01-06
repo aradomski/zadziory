@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 	if current_user.has_role? :tenant
 		stored_location_for(resource) || '/'
 	else
-		stored_location_for(resource) || '/user_panel'
+		stored_location_for(resource) || '/panel'
 	end
   end
   
