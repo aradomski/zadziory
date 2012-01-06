@@ -18,4 +18,9 @@ class ApplicationController < ActionController::Base
 	end
   end
   
+  def undefined_error 
+	flash[:alert] = "Musisz byc zalogowany !"
+	redirect_to '/'
+  end
+  
 end

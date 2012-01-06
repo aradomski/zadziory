@@ -16,6 +16,9 @@ $(document).ready(function() {
 		$( "a", ".knob" ).click(function() { return false; });
 	});
 	
+	$(".placee").click(function(){
+		window.location=$(this).find("a").attr("href"); return false;
+	});	
 });
 
 // trza sie przyjrzec, skumać ajax w railsie
