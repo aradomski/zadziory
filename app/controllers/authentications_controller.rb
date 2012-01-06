@@ -4,8 +4,9 @@ class AuthenticationsController < ApplicationController
 end
 
   def create
-	 omniauth = request.env["omniauth.auth"]
-	authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+	omniauth = request.env["omniauth.auth"]
+    authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+	
 	if authentication
 		flash[:notice] = "Logowanie udane!"
 		sign_in_and_redirect(:user, authentication.user)
@@ -22,15 +23,22 @@ end
 			sign_in_and_redirect(:user, user)
 		else
 			session[:omniauth] = omniauth.except('extra')
-			redirect_to new_user_registration_url
+			if omniauth['provider'] == 'twitter'
+				user.email = 'change.email@please.com'
+				flash[:notice] = "Logowanie udane!"
+				sign_in_and_redirect(:user, user)
+			else
+				flash[:notice] = "Mamy problem!"
+				redirect_to new_user_registration_url
+			end
 		end
 	end
   end
 
   def destroy
-  @authentication = current_user.authentications.find(params[:id])
-  @authentication.destroy
-  flash[:notice] = "Successfully destroyed authentication."
-  redirect_to authentications_url
-end
+	@authentication = current_user.authentications.find(params[:id])
+	@authentication.destroy
+	flash[:notice] = "Successfully destroyed authentication."
+	redirect_to authentications_url
+  end
 end
