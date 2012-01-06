@@ -12,6 +12,8 @@ Zadziory::Application.routes.draw do
 
   resources :histories
 
+  resources :user_panel
+
   devise_for :users
   
   devise_for :users, :path_names => {
