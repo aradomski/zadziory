@@ -11,6 +11,7 @@ div.show{
 	overflow-x: hidden;
 }
 div.show_content{
+	margin-left:3px;
 	margin-top:20px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -21,7 +22,7 @@ span.full_descripton{
 	white-space: pre-wrap;
 }
 div.availability{
-	padding-left: 2px;
+	padding-left: 4px;
 	padding-right: 2px;
 	padding-top: 2px;
 	margin:0px;
@@ -49,4 +50,21 @@ div.show_header{
 	width:873px;
 	z-index:0;
 	height:20px;
+}
+
+div.place_adress{
+	width:300px;
+	height:200px;
+	float:right;
+	border: 1px solid #696969;
+}
+div.place_price{
+	padding-top:30px;
+	height:170px;
+	width:566px;
+	border: 1px solid #696969;
+	margin-bottom:30px;
+}
+span.deposit{
+	font-size:8px;
 }
