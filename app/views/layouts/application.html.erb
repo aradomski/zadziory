@@ -50,10 +50,10 @@
 			 <% if user_signed_in? %>
 				Logged as <%= current_user.email %>. 
 				<%= link_to "Your panel", panel_path %>
-				<%= link_to "Log out", "logout" %>
+				<%= link_to "Log out", logout_path %>
 			<% else %>
-				<%= link_to "Login", "login" %>
-				<%= link_to "Register", "register" %> 
+				<%= link_to "Login", login_path %>
+				<%= link_to "Register", register_path %> 
 			<% end %>
 		</div>
 			  <!--<form action="" class="pull-right">
@@ -78,25 +78,8 @@
 					<%= content_tag :div, msg, :id => "#{name}" %>
 				<% end %>
 					
-     <!--      <div class="span10">10 * 60 = 600 px -->
             <%= yield %>
-        <!--  </div>
-         
-          
-          <div class="span4">
-            <h3>[secondary content]</h3>
-            <!--
-            <nav id="authentication">
-			<% if user_signed_in? %>
-				Logged as <%= current_user.email %>. Not you?
-				<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-			<% else %>
-				<%= link_to "Register", new_user_registration_path %> or
-				<%= link_to "Login", new_user_session_path %>
-				<% end %>
-			</nav>
-			
-          </div>-->
+        
         </div>
       </div>
 
