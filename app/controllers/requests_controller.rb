@@ -17,7 +17,6 @@ class RequestsController < ApplicationController
   # GET /preferences/new.xml
   def new
     @request = Request.new
-    @request.place_id = params[:place_id]
     respond_with(@request)
   end
 
