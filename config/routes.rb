@@ -18,11 +18,11 @@ Zadziory::Application.routes.draw do
 
   devise_for :users
   
-  devise_for :users, :path_names => {
-  :sign_in =>  "login",
-  :sign_up =>  "register",
-  :sign_out => "logout"
-  }
+  devise_scope :user do
+	get "login", :to => "devise/sessions#new" 
+	get "logout", :to => "devise/sessions#destroy"
+	get "register", :to => "devise/registrations#new"
+  end
   
   devise_for :users, :controllers => {:registrations => 'registrations'}
   

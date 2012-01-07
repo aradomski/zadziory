@@ -50,10 +50,10 @@
 			 <% if user_signed_in? %>
 				Logged as <%= current_user.email %>. 
 				<%= link_to "Your panel", panel_path %>
-				<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+				<%= link_to "Log out", "logout" %>
 			<% else %>
-				<%= link_to "Login", new_user_session_path %>
-				<%= link_to "Register", new_user_registration_path %> 
+				<%= link_to "Login", "login" %>
+				<%= link_to "Register", "register" %> 
 			<% end %>
 		</div>
 			  <!--<form action="" class="pull-right">
