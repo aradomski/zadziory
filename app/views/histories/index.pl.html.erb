@@ -1,0 +1,55 @@
+<% title "Wszystkie historie" %>
+<!--
+<% @histories.each do |history| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Wynajem od</span>
+    <span class="value"><%= history.date_start %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Wynajem do</span>
+    <span class="value"><%= history.date_end %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Komentarz wynajmu</span>
+    <span class="value"><%= history.comment_item %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Komentarz najemcy</span>
+    <span class="value"><%= history.comment_tenant %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Komentarz właściela obiektu</span>
+    <span class="value"><%= history.comment_owner %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Ocenta wynajmu</span>
+    <span class="value"><%= history.rate_item %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Ocena najemcy</span>
+    <span class="value"><%= history.rate_tenant %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Ocena właściciela obiektu</span>
+    <span class="value"><%= history.rate_owner %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Pokaż', history, class: "btn" %>
+    <%= link_to 'Edytuj', edit_history_path(history), class: "btn" %>
+    <%= link_to 'Usuń', history, confirm: 'Are you sure?',
+          method: :delete, class: "btn danger" %>
+  </div>
+</article>
+<% end %>
+-->
+
+<div id="places">
+	<%= render :partial => 'history', :collection => @histories %>
+</div>
+
+<% if can? :create, History %>
+<div class="link">
+  <%= link_to 'Nowa historia', new_history_path, class: "btn primary" %>
+</div>
+<% end %>
