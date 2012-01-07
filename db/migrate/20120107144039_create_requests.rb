@@ -4,7 +4,7 @@ class CreateRequests < ActiveRecord::Migration
       t.integer :user_id
       t.integer :place_id
       t.integer :owner_id
-      t.string :status
+      t.integer :status
       t.date :date_start
       t.date :date_end
       t.integer :number_of_people
