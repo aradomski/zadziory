@@ -1,10 +1,12 @@
 <% title "All places" %>
-<% if can? :create, Place %>
+
 	<div class="link">
+	<% if can? :create, Place %>
 		<%= link_to 'New Place', new_place_path, class: "btn primary" %>
+	<% end %>
 		 <%= link_to 'Pokaż wszystko', places_path, :remote => true, class: "btn primary" %>
 	</div>
-	<% end %>
+	
 <article class="index">
 
 <div class="seearch">

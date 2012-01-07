@@ -12,6 +12,7 @@ class Ability
       can [:update, :destroy], [Place], :user_id => user.id
     elsif user.has_role? :owner
 	  can [:read], [Place]
+	  can [:myPlaces], [Place]
       can [:create, :update, :destroy], [Place], :user_id => user.id
     elsif user.has_role? :tenant
       can [:read], [Place]

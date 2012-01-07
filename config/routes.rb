@@ -14,6 +14,8 @@ Zadziory::Application.routes.draw do
 
   resources :histories
 
+  resources :user_panel
+
   devise_for :users
   
   devise_for :users, :path_names => {
@@ -86,4 +88,9 @@ Zadziory::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+	get "myplaces" => "places#myPlaces", :as => "myplaces"
+	get "panel" => "user_panel#index", :as => "panel"
+	get "undefined" => "application#undefined_error", :as => "undefined"
+
 end

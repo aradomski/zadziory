@@ -4,7 +4,7 @@
 <div id="notice"><%= notice %></div>
 <% end -%>
 
-<article class="single">
+
   <% unless @place.images.empty?  %>
   
   <div id="gal" class="imageflow">
@@ -17,6 +17,10 @@
 
       </div>
   <% end %>
+  <div class="show">
+  <div class="availability">
+    <span class="value">Oferta aktywna od: <%= @place.availability_from %> do: <%= @place.availability_to %></span>
+  </div>
   <div class="attribute">
     <span class="name">Is active</span>
     <span class="value"><%= @place.is_active %></span>
@@ -24,14 +28,6 @@
   <div class="attribute">
     <span class="name">Owner</span>
     <span class="value"><%= @place.owner %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Availability from</span>
-    <span class="value"><%= @place.availability_from %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Availability to</span>
-    <span class="value"><%= @place.availability_to %></span>
   </div>
   <div class="attribute">
     <span class="name">Price min</span>
@@ -129,41 +125,19 @@
     <span class="name">Type length lease</span>
     <span class="value"><%= @place.type_length_lease %></span>
   </div>
-  <div class="attribute">
-    <span class="name">Description</span>
-    <span class="value"><%= @place.description %></span>
+  <div class="descripton">
+    <h3>Rozwin opis</h3>
+    <span class="full_descripton"><%= @place.description %></span>
   </div>
   <div class="attribute">
-    <span class="name">Has balcony</span>
-    <span class="value"><%= @place.has_balcony %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has garage</span>
-    <span class="value"><%= @place.has_garage %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has basement</span>
-    <span class="value"><%= @place.has_basement %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has parking</span>
-    <span class="value"><%= @place.has_parking %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has internet</span>
-    <span class="value"><%= @place.has_internet %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has terrace</span>
-    <span class="value"><%= @place.has_terrace %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has lift</span>
-    <span class="value"><%= @place.has_lift %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Has garden</span>
-    <span class="value"><%= @place.has_garden %></span>
+    <span class="name">Balkon</span><% if(@place.has_balcony ) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name">Garaż</span><% if(@place.has_garage) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name">Piwnica</span><% if(@place.has_basement) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Parking</span><% if(@place.has_parking) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Internet</span><% if(@place.has_internet) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Taras</span><% if(@place.has_terrace) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Winda</span> <% if(@place.has_lift) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Ogródek</span><% if(@place.has_garden) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
   </div>
   <div class="link">
     <% if current_user.has_role? :owner %>
@@ -174,4 +148,4 @@
     <% end %>
     <%= link_to 'Back', places_path, class: "btn primary" %>
   </div>
-</article>
+</div>
