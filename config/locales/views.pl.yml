@@ -1,0 +1,44 @@
+pl:
+  authentications:
+    index:
+      title: "Wszystkie uwierzytelnienia"
+  
+  place:
+    index:
+      title: "Wszystkie oferty"
+      new_place: "Nowa oferta"
+      show_all: "Pokaż wszystkie"
+    edit:
+      title: "Edytuj ofertę"
+      show: "Pokaż"
+      back: "Powrót"
+    new:
+      title: "Dodaj nową ofertę"
+      back: "Powrót"
+    placee:
+      active: "Oferta aktywna!"
+      average: "Ocena: : "
+      prize_min: "Minimalna cena: "
+      type: "Typ mieszkania: "
+      surface: "Powierzchnia: "
+      rooms: "Ilość pokoi: "
+      heating: "Typ ogrzewania: "
+      for: "Dla kogo? "
+      people_max: "Maksymalna ilość osób: "
+      avaible_from: "Dostępne od: "
+      to: "do: "
+      show: "Pokaż"
+      edit: "Edytuj"
+      delete: "Usuń"
+      sure: "Jesteś pewien/pewna?"
+    search:
+      city: "Miasto"
+      district: "Dzielnica"
+      price_min: "Cena minimalna"
+      price_max: "Cena maksymalna"
+      grade_min: "Ocena minimalna"
+      grade_max: "Ocena maksymalna"
+      type: "Typ obiektu"
+      search: "Szukaj"
+    show:
+

@@ -1,0 +1,41 @@
+	<div class="placee">
+		
+		<div class="where">
+			<b><%= place.city %></b>, <%= place.district %><br/>
+		</div>
+		
+		<% if place.is_active %>
+			<div class="activity">
+			<%=image_tag("active.png", :alt=>"Place Offer is active!", :width=>"25", :height=>"25")%>
+			<span class="aaa">Oferta aktywna!</span>
+			</div>
+		<% end %>
+		<div class="grade">Ocena: <%= place.grade %></div>
+		<div class="prizes">Minimalna cena: <%= place.price_min %></div>
+		<div class="placeInfo">	
+			<b> Typ lokalu: </b> <%= place.place_type %>
+			<b> Powierzchnia: </b> <%= place.surface %>
+			<b> Ilość pokoi: </b><%= place.nr_of_rooms %>
+			<b> Typ ogrzewania: </b><%= place.heating_type %>
+		</div>
+		<div class="people">
+			<b>Dla kogo: </b><%= place.for_who %>
+			<b>Maxymalna ilość osób: </b><%= place.people_max %>
+		</div>
+		<div class="dates">	
+			<b>Dostępne od: </b> <%= place.availability_from %>
+			<b>do: </b><%= place.availability_to %>
+		</div>
+		<div class="options">
+		<% if can? :read, place %>
+			<%= link_to "Pokaż szczegóły", place%>
+		<% end %>
+		<% if can? :update, place %>		
+				<%= link_to "Edytuj", edit_place_path(place) %>
+		<% end %>
+		<% if can? :destroy, place %>
+			<%= link_to "Usuń", place, :confirm => 'Jesteś pewien?', :method => :delete %>
+		<% end %>
+		</div>
+	
+	</div>

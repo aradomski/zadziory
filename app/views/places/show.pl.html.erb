@@ -1,0 +1,151 @@
+<% title "Szczegóły miejsca" %>
+
+<% if notice -%>
+<div id="notice"><%= notice %></div>
+<% end -%>
+
+
+  <% unless @place.images.empty?  %>
+  
+  <div id="gal" class="imageflow">
+  
+        <% for image in @place.images %>
+            
+            <%= image_tag image.image_url.to_s, :longdesc => image.image_url.to_s %>
+            
+       <% end %>
+
+      </div>
+  <% end %>
+  <div class="show">
+  <div class="availability">
+    <span class="value">Oferta aktywna od: <%= @place.availability_from %> do: <%= @place.availability_to %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Dostępna</span>
+    <span class="value"><%= @place.is_active %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Właściciel</span>
+    <span class="value"><%= @place.owner %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Cena minimalna</span>
+    <span class="value"><%= @place.price_min %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Cena maksymalna</span>
+    <span class="value"><%= @place.price_max %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Zaliczka</span>
+    <span class="value"><%= @place.deposit %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Ocena</span>
+    <span class="value"><%= @place.grade %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Telefon kontaktowy</span>
+    <span class="value"><%= @place.telephone %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Państwo</span>
+    <span class="value"><%= @place.country %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">województwo</span>
+    <span class="value"><%= @place.region %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Miasto</span>
+    <span class="value"><%= @place.city %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Dzielnica</span>
+    <span class="value"><%= @place.district %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Ulica</span>
+    <span class="value"><%= @place.street %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Numer domu</span>
+    <span class="value"><%= @place.place_nr %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Nr lokalu</span>
+    <span class="value"><%= @place.flat_nr %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Coordinates</span>
+    <span class="value"><%= @place.coordinates %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Typ lokalu</span>
+    <span class="value"><%= @place.place_type %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Piętro</span>
+    <span class="value"><%= @place.floor_nr %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Liczba pięter</span>
+    <span class="value"><%= @place.nr_of_floors %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Liczba pokoi</span>
+    <span class="value"><%= @place.nr_of_rooms %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Powierzchnia</span>
+    <span class="value"><%= @place.surface %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Rok budowy</span>
+    <span class="value"><%= @place.build_year %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Typ ogrzewania</span>
+    <span class="value"><%= @place.heating_type %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Maksymalna ilośc osób</span>
+    <span class="value"><%= @place.people_max %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Dla kogo</span>
+    <span class="value"><%= @place.for_who %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Minimalny czas wynajmu</span>
+    <span class="value"><%= @place.min_length_lease %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Maksymalny czas wynajmu</span>
+    <span class="value"><%= @place.type_length_lease %></span>
+  </div>
+  <div class="descripton">
+    <h3>Rozwin opis</h3>
+    <span class="full_descripton"><%= @place.description %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Balkon</span><% if(@place.has_balcony ) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name">Garaż</span><% if(@place.has_garage) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name">Piwnica</span><% if(@place.has_basement) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Parking</span><% if(@place.has_parking) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Internet</span><% if(@place.has_internet) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Taras</span><% if(@place.has_terrace) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Winda</span> <% if(@place.has_lift) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name">Ogródek</span><% if(@place.has_garden) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+  </div>
+  <div class="link">
+    <% if current_user.has_role? :owner %>
+        <%= link_to 'Edytuj', edit_place_path(@place), class: "btn primary" %>
+    <% end %>
+    <% if current_user.has_role? :tenant %>
+        <!--tu bedzie link do buttona wynajmu in progress-->
+    <% end %>
+    <%= link_to 'Powrót', places_path, class: "btn primary" %>
+  </div>
+</div>

@@ -1,10 +1,10 @@
-<%= t('place.index.title') %>
+<% title "Wszystkie oferty" %>
 
 	<div class="link">
 	<% if can? :create, Place %>
-		<%= link_to t('place.index.new_place'), new_place_path, class: "btn primary" %>
+		<%= link_to 'Nowa oferta', new_place_path, class: "btn primary" %>
 	<% end %>
-		 <%= link_to t('place.index.show_all'), places_path, :remote => true, class: "btn primary" %>
+		 <%= link_to 'Pokaż wszystkie', places_path, :remote => true, class: "btn primary" %>
 	</div>
 	
 <article class="index">
