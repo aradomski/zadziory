@@ -52,13 +52,49 @@ class RequestsController < ApplicationController
     respond_with(@request)
   end
 
-  def myTenantRequests
+  # actions for TENANT
+  def allTenantRequests
     @requests = Request.find_all_by_user_id(current_user.id)
 	  render 'requests/index'
   end
-   def myOwnerRequests
+  def pendingTenantRequests
+    @requests = Request.find(:all, :conditions => { :status => 1, :user_id => current_user.id })
+	  render 'requests/index'
+  end
+  def acceptedTenantRequests
+    @requests = Request.find(:all, :conditions => { :status => 2, :user_id => current_user.id })
+	  render 'requests/index'
+  end
+  def rentedTenantRequests
+    @requests = Request.find(:all, :conditions => { :status => 3, :user_id => current_user.id })
+	  render 'requests/index'
+  end
+  def rejectedTenantRequests
+    @requests = Request.find(:all, :conditions => { :status => 0, :user_id => current_user.id })
+	  render 'requests/index'
+  end
+
+
+  #actions for OWNER
+   def allOwnerRequests
     @requests = Request.find_all_by_owner_id(current_user.id)
 	  render 'requests/index'
    end
+   def pendingOwnerRequests
+    @requests = Request.find(:all, :conditions => { :status => 1, :owner_id => current_user.id })
+	  render 'requests/index'
+  end
+  def acceptedOwnerRequests
+    @requests = Request.find(:all, :conditions => { :status => 2, :owner_id => current_user.id })
+	  render 'requests/index'
+  end
+  def rentedOwnerRequests
+    @requests = Request.find(:all, :conditions => { :status => 3, :owner_id => current_user.id })
+	  render 'requests/index'
+  end
+  def rejectedOwnerRequests
+    @requests = Request.find(:all, :conditions => { :status => 0, :owner_id => current_user.id })
+	  render 'requests/index'
+  end
 
 end

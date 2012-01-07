@@ -92,7 +92,18 @@ Zadziory::Application.routes.draw do
 	get "myplaces" => "places#myPlaces", :as => "myplaces"
 	get "panel" => "user_panel#index", :as => "panel"
 	get "undefined" => "application#undefined_error", :as => "undefined"
-  get "mytenantrequests" => "requests#myTenantRequests", :as => "mytenantrequests"
-  get "myownerrequests" => "requests#myOwnerRequests", :as => "myownerrequests"
 
+  # matchings for Tenant actions
+  get "allTenantRequests" => "requests#allTenantRequests", :as => "all_tenant_requests"
+  get "pendingTenantRequests" => "requests#pendingTenantRequests", :as => "pending_tenant_requests"
+  get "acceptedTenantRequests" => "requests#acceptedTenantRequests", :as => "accepted_tenant_requests"
+  get "rentedTenantRequests" => "requests#rentedTenantRequests", :as => "rented_tenant_requests"
+  get "rejectedTenantRequests" => "requests#rejectedTenantRequests", :as => "rejected_tenant_requests"
+
+  # matchings for Owner actions
+  get "allOwnerRequests" => "requests#allOwnerRequests", :as => "all_owner_requests"
+  get "pendingOwnerRequests" => "requests#pendingOwnerRequests", :as => "pending_owner_requests"
+  get "acceptedOwnerRequests" => "requests#acceptedOwnerRequests", :as => "accepted_owner_requests"
+  get "rentedOwnerRequests" => "requests#rentedOwnerRequests", :as => "rented_owner_requests"
+  get "rejectedOwnerRequests" => "requests#rejectedOwnerRequests", :as => "rejected_owner_requests"
 end
