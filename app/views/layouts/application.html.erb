@@ -41,19 +41,19 @@
         <div class="container">
           <a class="brand" href="/"><%=image_tag("logo3.png", :alt=>"Logo", :width=>"180")%></a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="#"><%= t('layout.application.home') %></a></li>
+            <li><a href="#about"><%= t('layout.application.about') %></a></li>
+            <li><a href="#contact"><%= t('layout.application.contact') %></a></li>
           </ul>
           
 		<div class="pull-right">
 			 <% if user_signed_in? %>
-				Logged as <%= current_user.email %>. 
-				<%= link_to "Your panel", panel_path %>
-				<%= link_to "Log out", logout_path %>
+				<%= t('layout.application.logged') %> <%= current_user.email %>. 
+				<%= link_to t('layout.application.panel'), panel_path %>
+				<%= link_to t('layout.application.logout'), logout_path %>
 			<% else %>
-				<%= link_to "Login", login_path %>
-				<%= link_to "Register", register_path %> 
+				<%= link_to t('layout.application.login'), login_path %>
+				<%= link_to t('layout.application.register'), register_path %> 
 			<% end %>
 		</div>
 			  <!--<form action="" class="pull-right">

@@ -1,4 +1,4 @@
-<% title "Show place" %>
+<% title t('place.show.title') %>
 
 <% if notice -%>
 <div id="notice"><%= notice %></div>
@@ -21,7 +21,7 @@
   
   <div class="show_header" id="show_header">
 	<div class="availability">
-		<span class="value">Oferta aktywna od: <%= @place.availability_from %> do: <%= @place.availability_to %></span>
+		<span class="value"><%= t('place.show.active') %><%= @place.availability_from %><%= t('place.show.to') %><%= @place.availability_to %></span>
 	</div>
 	<div class="grade_stars"><%= @place.grade %></div>
 	<input type="hidden" value="<%= @place.is_active %>" />
@@ -29,99 +29,99 @@
   
   <div class="show_content">
   <div class="attribute">
-    <span class="name">Owner</span>
+    <span class="name"><%= t('place.show.owner')%></span>
     <span class="value"><%= @place.owner %></span>
   </div>
   <div class="attribute">
-    <span class="name">Price min</span>
+    <span class="name"><%= t('place.show.price_min')%></span>
     <span class="value"><%= @place.price_min %></span>
   </div>
   <div class="attribute">
-    <span class="name">Price max</span>
+    <span class="name"><%= t('place.show.price_max')%></span>
     <span class="value"><%= @place.price_max %></span>
   </div>
   <div class="attribute">
-    <span class="name">Deposit</span>
+    <span class="name"><%= t('place.show.deposit')%></span>
     <span class="value"><%= @place.deposit %></span>
   </div>
   <div class="attribute">
-    <span class="name">Telephone</span>
+    <span class="name"><%= t('place.show.telephone')%></span>
     <span class="value"><%= @place.telephone %></span>
   </div>
   <div class="attribute">
-    <span class="name">Country</span>
+    <span class="name"><%= t('place.show.country')%></span>
     <span class="value"><%= @place.country %></span>
   </div>
   <div class="attribute">
-    <span class="name">Region</span>
+    <span class="name"><%= t('place.show.region')%></span>
     <span class="value"><%= @place.region %></span>
   </div>
   <div class="attribute">
-    <span class="name">City</span>
+    <span class="name"><%= t('place.show.city')%></span>
     <span class="value"><%= @place.city %></span>
   </div>
   <div class="attribute">
-    <span class="name">District</span>
+    <span class="name"><%= t('place.show.district')%></span>
     <span class="value"><%= @place.district %></span>
   </div>
   <div class="attribute">
-    <span class="name">Street</span>
+    <span class="name"><%= t('place.show.street')%></span>
     <span class="value"><%= @place.street %></span>
   </div>
   <div class="attribute">
-    <span class="name">Place nr</span>
+    <span class="name"><%= t('place.show.place_nr')%></span>
     <span class="value"><%= @place.place_nr %></span>
   </div>
   <div class="attribute">
-    <span class="name">Flat nr</span>
+    <span class="name"><%= t('place.show.flat_nr')%></span>
     <span class="value"><%= @place.flat_nr %></span>
   </div>
   <div class="attribute">
-    <span class="name">Coordinates</span>
+    <span class="name">\<%= t('place.show.coordinates')%></span>
     <span class="value"><%= @place.coordinates %></span>
   </div>
   <div class="attribute">
-    <span class="name">Place type</span>
+    <span class="name"><%= t('place.show.place_type')%></span>
     <span class="value"><%= @place.place_type %></span>
   </div>
   <div class="attribute">
-    <span class="name">Floor nr</span>
+    <span class="name"><%= t('place.show.floor_nr')%></span>
     <span class="value"><%= @place.floor_nr %></span>
   </div>
   <div class="attribute">
-    <span class="name">Nr of floors</span>
+    <span class="name"><%= t('place.show.nr_of_floor')%></span>
     <span class="value"><%= @place.nr_of_floors %></span>
   </div>
   <div class="attribute">
-    <span class="name">Nr of rooms</span>
+    <span class="name"><%= t('place.show.rooms')%></span>
     <span class="value"><%= @place.nr_of_rooms %></span>
   </div>
   <div class="attribute">
-    <span class="name">Surface</span>
+    <span class="name"><%= t('place.show.surface')%></span>
     <span class="value"><%= @place.surface %></span>
   </div>
   <div class="attribute">
-    <span class="name">Build year</span>
+    <span class="name"><%= t('place.show.build')%></span>
     <span class="value"><%= @place.build_year %></span>
   </div>
   <div class="attribute">
-    <span class="name">Heating type</span>
+    <span class="name"><%= t('place.show.heating')%></span>
     <span class="value"><%= @place.heating_type %></span>
   </div>
   <div class="attribute">
-    <span class="name">People max</span>
+    <span class="name"><%= t('place.show.people')%></span>
     <span class="value"><%= @place.people_max %></span>
   </div>
   <div class="attribute">
-    <span class="name">For who</span>
+    <span class="name"><%= t('place.show.who')%></span>
     <span class="value"><%= @place.for_who %></span>
   </div>
   <div class="attribute">
-    <span class="name">Min length lease</span>
+    <span class="name"><%= t('place.show.length_min')%></span>
     <span class="value"><%= @place.min_length_lease %></span>
   </div>
   <div class="attribute">
-    <span class="name">Type length lease</span>
+    <span class="name"><%= t('place.show.type_length')%></span>
     <span class="value"><%= @place.type_length_lease %></span>
   </div>
   <div class="descripton">
@@ -129,23 +129,23 @@
     <span class="full_descripton"><%= @place.description %></span>
   </div>
   <div class="attribute">
-    <span class="name">Balkon</span><% if(@place.has_balcony ) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-    <span class="name">Garaż</span><% if(@place.has_garage) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-    <span class="name">Piwnica</span><% if(@place.has_basement) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-	<span class="name">Parking</span><% if(@place.has_parking) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-	<span class="name">Internet</span><% if(@place.has_internet) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-	<span class="name">Taras</span><% if(@place.has_terrace) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-	<span class="name">Winda</span> <% if(@place.has_lift) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
-	<span class="name">Ogródek</span><% if(@place.has_garden) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name"><%= t('place.show.balcony')%></span><% if(@place.has_balcony ) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name"><%= t('place.show.garage')%></span><% if(@place.has_garage) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+    <span class="name"><%= t('place.show.basement')%></span><% if(@place.has_basement) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name"><%= t('place.show.parking')%></span><% if(@place.has_parking) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name"><%= t('place.show.internet')%></span><% if(@place.has_internet) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name"><%= t('place.show.tarrace')%></span><% if(@place.has_terrace) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name"><%= t('place.show.lift')%></span> <% if(@place.has_lift) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
+	<span class="name"><%= t('place.show.garden')%></span><% if(@place.has_garden) %> <%=image_tag("active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% else %> <%=image_tag("not_active.png", :alt=>"true", :width=>"15", :height=>"15") %> <% end %>
   </div>
   <div class="link">
     <% if current_user.has_role? :owner %>
-        <%= link_to 'Edit', edit_place_path(@place), class: "btn primary" %>
+        <%= link_to t('place.show.edit'), edit_place_path(@place), class: "btn primary" %>
     <% end %>
     <% if current_user.has_role? :tenant %>
         <%= link_to 'New Request', new_request_path(:place_id => @place.id), class: "btn primary" %>
     <% end %>
-    <%= link_to 'Back', places_path, class: "btn primary" %>
+    <%= link_to t('place.show.back'), places_path, class: "btn primary" %>
   </div>
   </div>
 </div>
