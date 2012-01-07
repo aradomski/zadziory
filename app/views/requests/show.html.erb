@@ -1,0 +1,48 @@
+<% title "Show request" %>
+
+<% if notice -%>
+<div id="notice"><%= notice %></div>
+<% end -%>
+
+<article class="single">
+  <div class="attribute">
+    <span class="name">User</span>
+    <span class="value"><%= @request.user_id %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Place</span>
+    <span class="value"><%= @request.place_id %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Owner</span>
+    <span class="value"><%= @request.owner_id %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Status</span>
+    <span class="value"><%= @request.status %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Date start</span>
+    <span class="value"><%= @request.date_start %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Date end</span>
+    <span class="value"><%= @request.date_end %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Number of people</span>
+    <span class="value"><%= @request.number_of_people %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">People type</span>
+    <span class="value"><%= @request.people_type %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Message</span>
+    <span class="value"><%= @request.message %></span>
+  </div>
+  <div class="link">
+    <%= link_to 'Edit', edit_request_path(@request), class: "btn primary" %>
+    <%= link_to 'Back', requests_path, class: "btn primary" %>
+  </div>
+</article>

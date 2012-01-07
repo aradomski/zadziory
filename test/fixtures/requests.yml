@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  place_id: 1
+  owner_id: 1
+  status: MyString
+  date_start: 2012-01-07
+  date_end: 2012-01-07
+  number_of_people: 1
+  people_type: MyString
+  message: MyText
+
+two:
+  user_id: 1
+  place_id: 1
+  owner_id: 1
+  status: MyString
+  date_start: 2012-01-07
+  date_end: 2012-01-07
+  number_of_people: 1
+  people_type: MyString
+  message: MyText
