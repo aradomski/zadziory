@@ -1,5 +1,7 @@
 Zadziory::Application.routes.draw do
 
+  resources :requests
+
   resources :authentications
 
   ActiveAdmin.routes(self)
