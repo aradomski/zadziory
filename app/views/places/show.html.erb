@@ -144,7 +144,7 @@
         <%= link_to 'Edit', edit_place_path(@place), class: "btn primary" %>
     <% end %>
     <% if current_user.has_role? :tenant %>
-        <!--tu bedzie link do buttona wynajmu in progress-->
+        <%= link_to 'New Request', new_request_path(:place_id => @place.id), class: "btn primary" %>
     <% end %>
     <%= link_to 'Back', places_path, class: "btn primary" %>
   </div>

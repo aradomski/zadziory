@@ -29,6 +29,8 @@ class RequestsController < ApplicationController
   # POST /preferences.xml
   def create
     @request = Request.new(params[:request])
+    @request.user_id = current_user.id
+
     @request.save
     respond_with(@request)
   end
