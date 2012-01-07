@@ -7,34 +7,34 @@
 		<% if place.is_active %>
 			<div class="activity">
 			<%=image_tag("active.png", :alt=>"Place Offer is active!", :width=>"25", :height=>"25")%>
-			<span class="aaa">Offer is active!</span>
+			<span class="aaa"><%= t('place.placee.active') %></span>
 			</div>
 		<% end %>
-		<div class="grade">Average: <%= place.grade %></div>
-		<div class="prizes">Prize min: <%= place.price_min %></div>
+		<div class="grade"><%= t('place.placee.average') %><%= place.grade %></div>
+		<div class="prizes"><%= t('place.placee.prize_min') %><%= place.price_min %></div>
 		<div class="placeInfo">	
-			<b> Type: </b> <%= place.place_type %>
-			<b> Surface: </b> <%= place.surface %>
-			<b> Rooms: </b><%= place.nr_of_rooms %>
-			<b> Heating: </b><%= place.heating_type %>
+			<b><%= t('place.placee.type') %></b> <%= place.place_type %>
+			<b><%= t('place.placee.surface') %></b> <%= place.surface %>
+			<b><%= t('place.placee.rooms') %></b><%= place.nr_of_rooms %>
+			<b><%= t('place.placee.heating') %></b><%= place.heating_type %>
 		</div>
 		<div class="people">
-			<b>For: </b><%= place.for_who %>
-			<b>Max people: </b><%= place.people_max %>
+			<b><%= t('place.placee.for') %></b><%= place.for_who %>
+			<b><%= t('place.placee.people_max') %></b><%= place.people_max %>
 		</div>
 		<div class="dates">	
-			<b>Avaible from: </b> <%= place.availability_from %>
-			<b>to: </b><%= place.availability_to %>
+			<b><%= t('place.placee.avaible_from') %></b> <%= place.availability_from %>
+			<b><%= t('place.placee.to') %></b><%= place.availability_to %>
 		</div>
 		<div class="options">
 		<% if can? :read, place %>
-			<%= link_to "Show", place%>
+			<%= link_to t('place.placee.show'), place%>
 		<% end %>
 		<% if can? :update, place %>		
-				<%= link_to "Edit", edit_place_path(place) %>
+				<%= link_to t('place.placee.edit'), edit_place_path(place) %>
 		<% end %>
 		<% if can? :destroy, place %>
-			<%= link_to "Delete", place, :confirm => 'Are you sure?', :method => :delete %>
+			<%= link_to t('place.placee.delete'), place, :confirm => 'Are you sure?', :method => :delete %>
 		<% end %>
 		</div>
 	
