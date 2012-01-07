@@ -1,16 +1,20 @@
 div.show{
 	width:90%;
 	border: 2px solid #696969;
-	padding: 2px;
+	padding: 0px;
 	margin-left:auto;
 	margin-right:auto;
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-	height: 600px;
 	overflow-y: auto;
 	overflow-x: hidden;
-	
+}
+div.show_content{
+	margin-top:20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 600px;
 }
 
 span.full_descripton{
@@ -21,6 +25,28 @@ div.availability{
 	padding-right: 2px;
 	padding-top: 2px;
 	margin:0px;
-	margin-bottom:2em;
+	margin-bottom:0em;
+	font-size:12px;
+	float:left;
+}
+div.grade_stars{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	margin:0px;
+	margin-bottom:0em;
 	font-size:10px;
+	
+}
+div.show_header{
+	background-color:red;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	width:873px;
+	z-index:0;
+	height:20px;
 }

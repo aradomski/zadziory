@@ -18,13 +18,16 @@
       </div>
   <% end %>
   <div class="show">
-  <div class="availability">
-    <span class="value">Oferta aktywna od: <%= @place.availability_from %> do: <%= @place.availability_to %></span>
+  
+  <div class="show_header" id="show_header">
+	<div class="availability">
+		<span class="value">Oferta aktywna od: <%= @place.availability_from %> do: <%= @place.availability_to %></span>
+	</div>
+	<div class="grade_stars"><%= @place.grade %></div>
+	<input type="hidden" value="<%= @place.is_active %>" />
   </div>
-  <div class="attribute">
-    <span class="name">Is active</span>
-    <span class="value"><%= @place.is_active %></span>
-  </div>
+  
+  <div class="show_content">
   <div class="attribute">
     <span class="name">Owner</span>
     <span class="value"><%= @place.owner %></span>
@@ -40,10 +43,6 @@
   <div class="attribute">
     <span class="name">Deposit</span>
     <span class="value"><%= @place.deposit %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Grade</span>
-    <span class="value"><%= @place.grade %></span>
   </div>
   <div class="attribute">
     <span class="name">Telephone</span>
@@ -126,7 +125,7 @@
     <span class="value"><%= @place.type_length_lease %></span>
   </div>
   <div class="descripton">
-    <h3>Rozwin opis</h3>
+    <h3>+ Rozwin opis</h3>
     <span class="full_descripton"><%= @place.description %></span>
   </div>
   <div class="attribute">
@@ -144,8 +143,9 @@
         <%= link_to 'Edit', edit_place_path(@place), class: "btn primary" %>
     <% end %>
     <% if current_user.has_role? :tenant %>
-        <%= link_to 'New Request', new_request_path(:place_id => @place.id), class: "btn primary" %>
+        <!--tu bedzie link do buttona wynajmu in progress-->
     <% end %>
     <%= link_to 'Back', places_path, class: "btn primary" %>
+  </div>
   </div>
 </div>
