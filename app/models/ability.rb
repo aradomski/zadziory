@@ -13,9 +13,11 @@ class Ability
     elsif user.has_role? :owner
 	  can [:read], [Place]
 	  can [:myPlaces], [Place]
+    can [:read, :myOwnerRequests], [Request]
       can [:create, :update, :destroy], [Place], :user_id => user.id
     elsif user.has_role? :tenant
       can [:read], [Place]
+      can [:read, :myTenantRequests], [Request]
     else
 	  can [:index], [Place]
     end

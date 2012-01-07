@@ -92,5 +92,7 @@ Zadziory::Application.routes.draw do
 	get "myplaces" => "places#myPlaces", :as => "myplaces"
 	get "panel" => "user_panel#index", :as => "panel"
 	get "undefined" => "application#undefined_error", :as => "undefined"
+  get "mytenantrequests" => "requests#myTenantRequests", :as => "mytenantrequests"
+  get "myownerrequests" => "requests#myOwnerRequests", :as => "myownerrequests"
 
 end

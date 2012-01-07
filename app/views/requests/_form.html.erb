@@ -1,8 +1,6 @@
 <%= semantic_form_for @request do |f| %>
   <%= f.inputs do %>
     <%= f.input :place_id, :as => :hidden, :input_html => {:value => params[:place_id]} %>
-    <%= f.input :owner_id %>
-    <%= f.input :status %>
     <%= f.input :date_start, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
     <%= f.input :date_end, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
     <%= f.input :number_of_people, :input_html => { :size => 5 } %>

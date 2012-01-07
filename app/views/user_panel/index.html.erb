@@ -9,6 +9,12 @@
 	<% if can? :myPlaces, Place %>
 		<%= link_to 'Twoje miejsca', myplaces_path , class: "btn primary" %>
 	<% end %>
+    <% if can? :myTenantRequests, Request %>
+        <%= link_to 'Moje zapytania', mytenantrequests_path , class: "btn primary" %>
+    <% end %>
+   <% if can? :myOwnerRequests, Request %>
+        <%= link_to 'Moje zapytania', myownerrequests_path , class: "btn primary" %>
+    <% end %>
  </div>
 
 </article>

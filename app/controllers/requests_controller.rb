@@ -30,7 +30,8 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(params[:request])
     @request.user_id = current_user.id
-
+    @request.owner_id = User.find(Place.find(params[:request][:place_id]).user_id).id
+    @request.status = 1
     @request.save
     respond_with(@request)
   end
@@ -50,4 +51,14 @@ class RequestsController < ApplicationController
     @request.destroy
     respond_with(@request)
   end
+
+  def myTenantRequests
+    @requests = Request.find_all_by_user_id(current_user.id)
+	  render 'requests/index'
+  end
+   def myOwnerRequests
+    @requests = Request.find_all_by_owner_id(current_user.id)
+	  render 'requests/index'
+   end
+
 end
