@@ -15,7 +15,7 @@
    <% if can? :myOwnerRequests, Request %>
         <%= link_to t('user_panel.index.request'), all_owner_requests_path , class: "btn primary" %>
     <% end %>
-    <%= link_to t('user.my.info'), current_user , class: "btn primary" %>
+    <%= link_to t('user.my.info'), my_account_path , class: "btn primary" %>
  </div>
 
 </article>

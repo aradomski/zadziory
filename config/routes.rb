@@ -93,7 +93,7 @@ Zadziory::Application.routes.draw do
 	get "myplaces" => "places#myPlaces", :as => "myplaces"
 	get "panel" => "user_panel#index", :as => "panel"
 	get "undefined" => "application#undefined_error", :as => "undefined"
-	get '/users/:id' => 'users#show', :as => "user"
+	get '/user' => 'users#myAccount', :as => "my_account"
 
   # matchings for Tenant actions
   get "allTenantRequests" => "requests#allTenantRequests", :as => "all_tenant_requests"
