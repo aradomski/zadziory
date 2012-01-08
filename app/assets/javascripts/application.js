@@ -25,6 +25,13 @@ $(document).ready(function() {
       $(this).delay(2500).fadeOut();
     });
    });
+
+    $(function() {
+        $('.inline-errors').fadeIn('slow');
+
+        $('.inline-errors').mouseover().fadeOut('slow');
+    });
+
 });
 
 // trza sie przyjrzec, skumać ajax w railsie

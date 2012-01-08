@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 	include RoleModel
 
   validates :username, :presence => true
-  validates :login, :presence => true
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
