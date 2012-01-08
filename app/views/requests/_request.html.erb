@@ -45,7 +45,7 @@
     <% if current_user.has_role? :owner %>
         <%= semantic_form_for request do |f| %>
           <%= f.inputs do %>
-            <%= f.input :status, :as => :select, :collection => get_status_collection %>
+            <%= f.input :status, :as => :select, :collection => get_status_collection, :include_blank => false %>
           <% end %>
 
           <%= f.buttons do %>
