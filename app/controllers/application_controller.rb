@@ -11,10 +11,14 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_in_path_for(resource)
-	if current_user.has_role? :tenant
-		stored_location_for(resource) || '/'
+	if current_user != nil
+		if current_user.has_role? :tenant
+			stored_location_for(resource) || '/'
+		else 
+			stored_location_for(resource) || '/panel'
+		end
 	else
-		stored_location_for(resource) || '/panel'
+		stored_location_for(resource) || '/admin'
 	end
   end
   

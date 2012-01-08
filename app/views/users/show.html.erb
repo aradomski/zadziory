@@ -1,0 +1,29 @@
+<% title t('user.my.info') %>
+
+<% if notice -%>
+<div id="notice"><%= notice %></div>
+<% end -%> 
+  
+<article class="single">
+
+	<div class="show">
+
+		<div class="attribute">
+			<span class="name"><%= t('user.username')%> </span>
+			<span class="name"><%=  @user.name %> <%=  @user.surname %></span>
+		</div>
+		<div class="attribute">
+			<span class="name"><%= t('user.years')%>:</span>
+			<span class="name"><%=  @user.years %></span>
+		</div>
+		<div class="attribute">
+			<span class="name"><%= t('user.email')%>:</span>
+			<span class="name"><%=  @user.email %></span>
+		</div>
+		
+		
+		<div class="link">
+			<%= link_to t('place.show.back'), panel_path, class: "btn primary" %>
+		</div>
+  </div>
+</article>

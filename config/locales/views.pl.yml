@@ -91,9 +91,16 @@ pl:
       login: "Zaloguj"
       register: "Zarejestruj"
   user_panel:
+    label: "Panel użytkownika"
     index:
-      title: "Panel użytkownika"
       all_places: "Wszystkie miejsca"
       my_places: "Moje miejsca"
       request: "Moje zapytania"
-      
+  user:
+    email: "E-mail"
+    name: "Imię "
+    surname: "Nazwisko"
+    years: "Wiek"
+    username: "Użytkownik"
+    my:
+      info: "Moje konto"

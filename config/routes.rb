@@ -27,6 +27,7 @@ Zadziory::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'registrations'}
   
   match '/auth/:provider/callback' => 'authentications#create'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -92,6 +93,7 @@ Zadziory::Application.routes.draw do
 	get "myplaces" => "places#myPlaces", :as => "myplaces"
 	get "panel" => "user_panel#index", :as => "panel"
 	get "undefined" => "application#undefined_error", :as => "undefined"
+	get '/users/:id' => 'users#show', :as => "user"
 
   # matchings for Tenant actions
   get "allTenantRequests" => "requests#allTenantRequests", :as => "all_tenant_requests"
