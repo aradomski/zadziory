@@ -6,7 +6,6 @@
 	<% end %>
 		 <%= link_to t('place.index.show_all'), places_path, :remote => true, class: "btn primary" %>
 	</div>
-	
 <article class="index">
 
 <div class="seearch">
@@ -15,11 +14,8 @@
 
 <div id="places">
 	<%= render :partial => 'place', :collection => @places %>
-	
-	
 	<%= params[:search] %>
-</div>
-
+</div><br />
 </article>
 
 
