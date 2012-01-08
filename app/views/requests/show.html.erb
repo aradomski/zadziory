@@ -7,7 +7,7 @@
 <article class="single">
   <div class="attribute">
     <span class="name">User</span>
-    <span class="value"><%= @request.user_id %></span>
+    <span class="value">    <%= link_to get_user_email(@request.user_id), user_path(@request.user_id)%></span>
   </div>
   <div class="attribute">
     <span class="name">Place</span>

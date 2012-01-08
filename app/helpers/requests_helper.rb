@@ -17,4 +17,8 @@ module RequestsHelper
      end
   end
 
+  def get_user_email(id)
+    User.find(id).email.to_s
+  end
+
 end
