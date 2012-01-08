@@ -2,7 +2,8 @@ pl:
   authentications:
     index:
       title: "Wszystkie uwierzytelnienia"
-  
+  edit:
+    label: "Edytuj"
   place:
     index:
       title: "Wszystkie oferty"
