@@ -1,2 +1,68 @@
-<!--
-miejsce na szablon dla requasta-->
+<article class="request">
+  <% if current_user.has_role? :tenant  %>
+        <div class="attribute">
+        <span class="name">Owner</span>
+        <span class="value"><%= link_to get_user_email(request.owner_id), user_path(request.user_id)%></span>
+      </div>
+  <% end %>
+  <% if current_user.has_role? :owner  %>
+      <div class="attribute">
+        <span class="name">User</span>
+        <span class="value">    <%= link_to get_user_email(request.user_id), user_path(request.user_id)%></span>
+      </div>
+  <% end %>
+    <div class="attribute">
+    <span class="name">Place</span>
+      <span class="value"><%= link_to request.place_id.to_s, place_path(request.place_id) %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Status</span>
+      <span class="value"><%= get_status(request.status) %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Date start</span>
+    <span class="value"><%= request.date_start %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Date end</span>
+    <span class="value"><%= request.date_end %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Number of people</span>
+    <span class="value"><%= request.number_of_people %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">People type</span>
+    <span class="value"><%= request.people_type %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Message</span>
+    <span class="value"><%= request.message %></span>
+  </div>
+  <div>
+    <% if current_user.has_role? :owner  %>
+        <% if get_status(request.status) == "pending" %>
+            <%= semantic_form_for request do |f| %>
+              <%= f.inputs do %>
+                <%= f.input :status, :as => :select, :collection => get_status_collection(:pending), :include_blank => false %>
+              <% end %>
+
+              <%= f.buttons do %>
+                <%= f.commit_button :button_html => { :confirm => "Are you sure?" } %>
+              <% end %>
+            <% end %>
+        <% end %>
+        <% if  get_status(request.status) == "accepted" %>
+           <%= semantic_form_for request do |f| %>
+              <%= f.inputs do %>
+                <%= f.input :status, :as => :select, :collection => get_status_collection(:accepted), :include_blank => false %>
+              <% end %>
+
+              <%= f.buttons do %>
+                <%= f.commit_button :button_html => { :confirm => "Are you sure?" } %>
+              <% end %>
+            <% end %>
+        <% end %>
+    <% end %>
+  </div>
+</article>
