@@ -29,24 +29,16 @@ $(document).ready(function() {
     $(function() {
         $('.inline-errors').fadeIn('slow');
 
-        $('.inline-errors').mouseover().fadeOut('slow');
+        $('.inline-errors').mouseover(function(){
+
+            $(this).fadeOut('slow');
+        })
     });
 
 });
 
-// trza sie przyjrzec, skumać ajax w railsie
-/*$(document).ready(function() {
-$('alert').(function(){			
-		$(this).fadeIn('slow');
-		$(this).css('color','#CC0000');
-		$(this).mouseover(function(){
-		$(this).fadeOut('slow');
-		});
-});
-});
-
 //resztki jakiejs walki
-   $(document).ready(function() {
+  /* $(document).ready(function() {
         $("#place_country_input").delegate("place_country","change", function() {
         // make a POST call and replace the content
         var country = $('select#place_country :selected').val();
