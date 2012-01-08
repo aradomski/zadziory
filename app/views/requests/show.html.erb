@@ -7,19 +7,15 @@
 <article class="single">
   <div class="attribute">
     <span class="name">User</span>
-    <span class="value"><%= @request.user_id %></span>
+    <span class="value">    <%= link_to get_user_email(@request.user_id), user_path(@request.user_id)%></span>
   </div>
   <div class="attribute">
     <span class="name">Place</span>
-    <span class="value"><%= @request.place_id %></span>
-  </div>
-  <div class="attribute">
-    <span class="name">Owner</span>
-    <span class="value"><%= @request.owner_id %></span>
+    <span class="value"><%= link_to @request.place_id.to_s, place_path(@request.place_id) %></span>
   </div>
   <div class="attribute">
     <span class="name">Status</span>
-    <span class="value"><%= @request.status %></span>
+    <span class="value"><%= get_status(@request.status) %></span>
   </div>
   <div class="attribute">
     <span class="name">Date start</span>
