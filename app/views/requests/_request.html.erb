@@ -1,15 +1,19 @@
 <article class="request">
-  <div class="attribute">
-    <span class="name">User</span>
-    <span class="value">    <%= link_to get_user_email(request.user_id), user_path(request.user_id)%></span>
-  </div>
+  <% if current_user.has_role? :tenant  %>
+        <div class="attribute">
+        <span class="name">Owner</span>
+        <span class="value"><%= link_to get_user_email(request.owner_id), user_path(request.user_id)%></span>
+      </div>
+  <% end %>
+  <% if current_user.has_role? :owner  %>
+      <div class="attribute">
+        <span class="name">User</span>
+        <span class="value">    <%= link_to get_user_email(request.user_id), user_path(request.user_id)%></span>
+      </div>
+  <% end %>
     <div class="attribute">
     <span class="name">Place</span>
       <span class="value"><%= link_to request.place_id.to_s, place_path(request.place_id) %></span>
-  </div>
-    <div class="attribute">
-    <span class="name">Owner</span>
-    <span class="value"><%= request.owner_id %></span>
   </div>
     <div class="attribute">
     <span class="name">Status</span>
@@ -44,7 +48,7 @@
               <% end %>
 
               <%= f.buttons do %>
-                <%= f.commit_button %>
+                <%= f.commit_button :button_html => { :confirm => "Are you sure?" } %>
               <% end %>
             <% end %>
         <% end %>
@@ -55,7 +59,7 @@
               <% end %>
 
               <%= f.buttons do %>
-                <%= f.commit_button %>
+                <%= f.commit_button :button_html => { :confirm => "Are you sure?" } %>
               <% end %>
             <% end %>
         <% end %>
