@@ -20,11 +20,10 @@ $(document).ready(function() {
 		window.location=$(this).find("a").attr("href"); return false;
 	});
 
-    $('#flash').fadeIn('normal', function() {
-      $(this).delay(5000).fadeOut('slow');
-      $(this).mouseover(function(){
-			$(this).fadeOut('slow');
-      });
+   $(function() {
+    $('#flash').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).fadeOut();
+    });
    });
 });
 
