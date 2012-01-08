@@ -392,7 +392,7 @@ eleven:
   telephone: 622-390-767
   country: Polska
   city: Sopot
-  district: none
+  district: -
   street: 3 Maja
   place_nr: 20
   flat_nr: 41
