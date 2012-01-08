@@ -17,7 +17,7 @@ pl:
       unauthenticated: 'Aby kontynuować zaloguj lub zarejestruj się.'
       unconfirmed: 'Aby kontynuować aktywuj konto.'
       locked: 'Twoje konto jest zablokowane.'
-      invalid: 'Niepoprawny adres email lub hasło.'
+      invalid: 'Nie znaleziono takiegu użytkownika.'
       invalid_token: 'Niepoprawny token.'
       timeout: 'Sesja wygasła, aby kontynuować zaloguj się ponownie.'
       inactive: 'Konto nie zostało jeszcze aktywowane.'

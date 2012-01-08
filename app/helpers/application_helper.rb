@@ -9,4 +9,11 @@ def flash_display
   response
 end
 
+  def get_user_email(id)
+    User.find(id).email.to_s
+  end
+    def get_user_username(id)
+    User.find(id).username.to_s
+  end
+
 end

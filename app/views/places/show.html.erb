@@ -29,13 +29,15 @@
   
   <div class="place_adress">
   Dane: <br />
-    <%= t('place.show.owner')%> <%= @place.owner %> <br />
-   <%= t('place.show.street')%> <%= @place.street %> <%= @place.place_nr %> / <%= @place.flat_nr %><br />
+    <%= t('place.show.owner')%> <%= link_to get_user_username(@place.user_id), user_path(@place.user_id)%> <br />
+    <% if current_user.id == @place.user_id %>
+        <%= t('place.show.telephone')%> <%= @place.telephone %> <br />
+        <%= t('place.show.street')%> <%= @place.street %> <%= @place.place_nr %> / <%= @place.flat_nr %><br />
+    <% end %>
 	<%= t('place.show.district')%> <%= @place.district %> <br />
    <%= t('place.show.city')%> <%= @place.city %> <br />
    <%= t('place.show.region')%> <%= @place.region %> <br />
    <%= t('place.show.country')%> <%= @place.country %> <br />
-   <%= t('place.show.telephone')%> <%= @place.telephone %> <br />
   </div>
   
   <div class="place_price">
