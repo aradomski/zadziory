@@ -73,10 +73,11 @@
           <%= content_tag :h1, yield(:title) if show_title? %>
         </div>
         <div class="row">
-			
+			    <div id="flash">
 				<% flash.each do |name, msg| %>
 					<%= content_tag :div, msg, :id => "#{name}" %>
 				<% end %>
+                </div>
 					
             <%= yield %>
         

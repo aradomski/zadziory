@@ -18,7 +18,13 @@ $(document).ready(function() {
 	
 	$(".placee").click(function(){
 		window.location=$(this).find("a").attr("href"); return false;
-	});	
+	});
+
+    $('#flash').fadeIn('normal', function() {
+      $(this).mouseover(function(){
+			$(this).fadeOut('slow');
+      });
+   });
 });
 
 // trza sie przyjrzec, skumać ajax w railsie
