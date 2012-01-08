@@ -3,10 +3,12 @@
 <%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
 	<%= f.inputs do %>
-	
-	<%= f.input :email, :as => :email, :input_html => { :size => 30 } %>
 
-	<%= f.input :password, :as => :password, :input_html => { :size => 30 } %>
+    <%= f.input :username, :label => t("user.username"), :input_html => { :size => 30 } %>
+
+	<%= f.input :email, :label => t("user.email"), :as => :email, :input_html => { :size => 30 } %>
+
+	<%= f.input :password, :as => :password, :label => t("user.password"), :input_html => { :size => 30 } %>
 
 	<% if devise_mapping.rememberable? -%>
 		<%= f.input :remember_me , :as => :boolean %> 

@@ -1,14 +1,16 @@
-<% title "Register" %>
+<% title t("devise.register") %>
 <div id="register">
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <!-- <%= devise_error_messages! %>  -->
 	<%= f.inputs do %>
-	
-	<%= f.input :email, :as => :email, :input_html => { :size => 30 } %>
 
-	<%= f.input :password, :as => :password, :input_html => { :size => 30 } %>
+    <%= f.input :username, :label => t("user.username"), :input_html => { :size => 30 } %>
 
-	<%= f.input :password_confirmation, :as => :password , :input_html => { :size => 30 } %>
+	<%= f.input :email, :label => t("user.email"), :as => :email, :input_html => { :size => 30 } %>
+
+	<%= f.input :password, :as => :password, :label => t("user.password"), :input_html => { :size => 30 } %>
+
+	<%= f.input :password_confirmation, :as => :password ,:label => t("user.password_confirm"), :input_html => { :size => 30 } %>
 	
 	<div class="radio_roles">
 		<%= render :partial => "devise/shared/roles"%>
@@ -17,9 +19,11 @@
 	<%end%>
 
 	<div class="knob">
+    <span class="rr">
 	<%= f.buttons do %>
 		<%= f.commit_button :label => "Register" %>
 	<% end %>
+    </span>
 	</div>
 	
 <% end %>

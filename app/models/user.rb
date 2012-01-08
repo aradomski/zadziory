@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 	include RoleModel
+
+  validates :username, :presence => true
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -15,7 +18,7 @@ class User < ActiveRecord::Base
   
   roles_attribute :roles_mask
   
-  roles :moderator, :owner, :tenant, :banned #:admin,
+  roles :moderator, :owner, :tenant, :banned
   
   def apply_omniauth(omniauth)
 	self.email = omniauth['user_info']['email'] if email.blank?

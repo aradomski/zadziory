@@ -5,7 +5,7 @@ end
 
   def create
 	omniauth = request.env["omniauth.auth"]
-    authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+  authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
 	
 	if authentication
 		flash[:notice] = "Logowanie udane!"
@@ -18,27 +18,33 @@ end
 		user = User.new
 		user.roles << :tenant
 		user.apply_omniauth(omniauth)
-		if user.save
+
+    if omniauth['provider'] == 'facebook'
+      user.username = omniauth['user_info']['name']
+      user.name = omniauth['user_info']['first_name']
+      user.surname = omniauth['user_info']['last_name']
+      # raise request.env["omniauth.auth"].to_yaml
+    elsif omniauth['provider'] == 'twitter'
+      #raise request.env["omniauth.auth"].to_yaml
+		  user.username = omniauth['user_info']['nickname']
+			user.email = 'change.email@please.com'
+    end
+
+    if user.save
 			flash[:notice] = "Logowanie udane!"
 			sign_in_and_redirect(:user, user)
-		else
+    else
 			session[:omniauth] = omniauth.except('extra')
-			if omniauth['provider'] == 'twitter'
-				user.email = 'change.email@please.com'
-				flash[:notice] = "Logowanie udane!"
-				sign_in_and_redirect(:user, user)
-			else
-				flash[:notice] = "Mamy problem!"
-				redirect_to new_user_registration_url
-			end
-		end
+      flash[:notice] = "Mamy problem!"
+			redirect_to new_user_registration_url
+    end
 	end
   end
 
   def destroy
-	@authentication = current_user.authentications.find(params[:id])
-	@authentication.destroy
-	flash[:notice] = "Successfully destroyed authentication."
-	redirect_to authentications_url
+	  @authentication = current_user.authentications.find(params[:id])
+	  @authentication.destroy
+	  flash[:notice] = "Successfully destroyed authentication."
+	  redirect_to authentications_url
   end
 end

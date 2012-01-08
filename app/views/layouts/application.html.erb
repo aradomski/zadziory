@@ -48,7 +48,7 @@
           
 		<div class="pull-right">
 			 <% if user_signed_in? %>
-				<%= t('layout.application.logged') %> <%= current_user.email %>. 
+				<%= t('layout.application.logged') %> <%= current_user.username %>.
 				<%= link_to t('layout.application.panel'), panel_path %>
 				<%= link_to t('layout.application.logout'), logout_path %>
 			<% else %>

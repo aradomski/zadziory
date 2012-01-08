@@ -103,5 +103,9 @@ pl:
     surname: "Nazwisko"
     years: "Wiek"
     username: "Użytkownik"
+    password: "Hasło"
+    password_confirm: "Powtórz hasło"
     my:
       info: "Moje konto"
+  devise:
+    register: "Rejestracja"
