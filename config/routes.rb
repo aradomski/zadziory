@@ -27,7 +27,8 @@ Zadziory::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'registrations'}
   
   match '/auth/:provider/callback' => 'authentications#create'
-  
+
+	get '/users/:id' => 'users#show', :as => "user"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
