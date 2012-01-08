@@ -1,7 +1,7 @@
 div.show{
 	width:90%;
 	border: 2px solid #696969;
-	padding: 0px;
+	padding: 5px;
 	margin-left:auto;
 	margin-right:auto;
 	-webkit-border-radius: 7px;
@@ -11,11 +11,11 @@ div.show{
 	overflow-x: hidden;
 }
 div.show_content{
-	margin-left:3px;
-	margin-top:20px;
+	margin-left:10px;
+	margin-top:40px;
 	overflow-y: auto;
 	overflow-x: hidden;
-	height: 600px;
+	height: 520px;
 }
 
 span.full_descripton{
@@ -24,23 +24,23 @@ span.full_descripton{
 div.availability{
 	padding-left: 4px;
 	padding-right: 2px;
-	padding-top: 2px;
+	padding-top: 6px;
 	margin:0px;
 	margin-bottom:0em;
-	font-size:12px;
+	font-size:16px;
 	float:left;
 }
 div.grade_stars{
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-top: 2px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
 	margin:0px;
 	margin-bottom:0em;
-	font-size:10px;
+	font-size:30px;
 	
 }
 div.show_header{
-	background-color:red;
+	background-color:#f85c32;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -49,22 +49,24 @@ div.show_header{
 	position:absolute;
 	width:891px;
 	z-index:0;
-	height:20px;
+	height:30px;
 }
 
 div.place_adress{
-	width:300px;
+	text-align:center;
+	width:350px;
 	height:200px;
 	float:right;
 }
 div.place_price{
+	text-transform:uppercase;
 	padding-top:30px;
 	height:170px;
 	width:566px;
 	margin-bottom:30px;
 }
 span.deposit{
-	font-size:8px;
+	font-size:12px;
 }
 
 div.paginator{
