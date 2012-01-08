@@ -35,22 +35,29 @@
     <span class="name">Message</span>
     <span class="value"><%= request.message %></span>
   </div>
-    <div class="links">
-    <%= link_to 'Show', request, class: "btn" %>
-    <%= link_to 'Edit', edit_request_path(request), class: "btn" %>
-    <%= link_to 'Destroy', request, confirm: 'Are you sure?',
-          method: :delete, class: "btn danger" %>
-  </div>
   <div>
-    <% if current_user.has_role? :owner %>
-        <%= semantic_form_for request do |f| %>
-          <%= f.inputs do %>
-            <%= f.input :status, :as => :select, :collection => get_status_collection, :include_blank => false %>
-          <% end %>
+    <% if current_user.has_role? :owner  %>
+        <% if get_status(request.status) == "pending" %>
+            <%= semantic_form_for request do |f| %>
+              <%= f.inputs do %>
+                <%= f.input :status, :as => :select, :collection => get_status_collection(:pending), :include_blank => false %>
+              <% end %>
 
-          <%= f.buttons do %>
-            <%= f.commit_button %>
-          <% end %>
+              <%= f.buttons do %>
+                <%= f.commit_button %>
+              <% end %>
+            <% end %>
+        <% end %>
+        <% if  get_status(request.status) == "accepted" %>
+           <%= semantic_form_for request do |f| %>
+              <%= f.inputs do %>
+                <%= f.input :status, :as => :select, :collection => get_status_collection(:accepted), :include_blank => false %>
+              <% end %>
+
+              <%= f.buttons do %>
+                <%= f.commit_button %>
+              <% end %>
+            <% end %>
         <% end %>
     <% end %>
   </div>
