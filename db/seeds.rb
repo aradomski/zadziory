@@ -16,15 +16,15 @@ require 'active_record/fixtures'
 
 User.create :email => 'mod@rentluk.pl',
   :password=> '123456', :password_confirmation => '123456',
-  :roles => [:moderator]
+  :roles => [:moderator] , :username => 'mod'
   puts "utworzono moda"
 User.create :email => 'owner@rentluk.pl',
   :password=> '123456', :password_confirmation => '123456',
-  :roles => [:owner]
+  :roles => [:owner] ,  :username => 'owner'
   puts "utworzono owner"
 User.create :email => 'user@rentluk.pl',
   :password=> '123456', :password_confirmation => '123456',
-  :roles => [:tenant]
+  :roles => [:tenant]   , :username => 'user'
   puts "utworzono usera"
 #Place.create :is_active => 'true', :owner => 'Adam', :availability_from => '2011-11-16',
 #  :availability_to => '2011-11-18', :price_min => '80.0', :price_max => '100.0', :deposit => '30',
