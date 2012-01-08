@@ -2,7 +2,6 @@
 
 one:
   is_active: false
-  owner: wlasciciel
   availability_from: 2011-12-15
   availability_to: 2011-12-15
   price_min: 9.99
@@ -40,7 +39,6 @@ one:
 
 two:
   is_active: true
-  owner: Adam
   availability_from: 2012-01-15
   availability_to: 2012-02-15
   price_min: 80.5
@@ -78,7 +76,6 @@ two:
 
 three:
   is_active: true
-  owner: Adam
   availability_from: 2012-01-10
   availability_to: 2012-06-30
   price_min: 400.00
@@ -116,7 +113,6 @@ three:
 
 four:
   is_active: true
-  owner: Adam
   availability_from: 2012-01-15
   availability_to: 2012-06-30
   price_min: 500
@@ -154,7 +150,6 @@ four:
 
 five:
   is_active: true
-  owner: Maciej
   availability_from: 2012-01-15
   availability_to: 2020-01-15
   price_min: 120
@@ -192,7 +187,6 @@ five:
 
 six:
   is_active: true
-  owner: inz. Zbigniew
   availability_from: 2012-01-15
   availability_to: 2012-02-28
   price_min: 350
@@ -230,7 +224,6 @@ six:
 
 seven:
   is_active: true
-  owner: Hanna
   availability_from: 2012-06-01
   availability_to: 2012-02-15
   price_min: 600
@@ -268,7 +261,6 @@ seven:
 
 eight:
   is_active: true
-  owner: Marek
   availability_from: 2012-05-10
   availability_to: 2012-09-01
   price_min: 500
@@ -306,7 +298,6 @@ eight:
 
 nine:
   is_active: true
-  owner: Marcin
   availability_from: 2011-12-01
   availability_to: 2012-06-30
   price_min: 700
@@ -344,7 +335,6 @@ nine:
 
 ten:
   is_active: true
-  owner: Bozena
   availability_from: 2012-01-15
   availability_to: 2013-02-15
   price_min: 250
@@ -382,7 +372,6 @@ ten:
 
 eleven:
   is_active: true
-  owner: Katarzyna
   availability_from: 2012-01-15
   availability_to: 2015-02-15
   price_min: 1000
@@ -420,7 +409,6 @@ eleven:
 
 twelve:
   is_active: true
-  owner: Marcin
   availability_from: 2012-01-15
   availability_to: 2016-02-15
   price_min: 80.5
