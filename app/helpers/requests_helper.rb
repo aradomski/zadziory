@@ -21,4 +21,8 @@ module RequestsHelper
     User.find(id).email.to_s
   end
 
+  def get_status_collection
+    {get_status(1) => 1, get_status(2) => 2, get_status(3) => 3, get_status(0) => 0}
+  end
+
 end

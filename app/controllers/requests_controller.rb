@@ -41,7 +41,17 @@ class RequestsController < ApplicationController
   def update
     @request = Request.find(params[:id])
     @request.update_attributes(params[:request])
-    respond_with(@request)
+    #respond_with(@request)
+    case params[:request][:status]
+      when "0"
+         redirect_to  rejected_owner_requests_path and return
+       when "1"
+         redirect_to  pending_owner_requests_path and return
+       when "2"
+         redirect_to  accepted_owner_requests_path and return
+       when "3"
+         redirect_to  rented_owner_requests_path and return
+    end
   end
 
   # DELETE /preferences/1
