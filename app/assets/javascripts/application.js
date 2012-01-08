@@ -21,6 +21,7 @@ $(document).ready(function() {
 	});
 
     $('#flash').fadeIn('normal', function() {
+      $(this).delay(5000).fadeOut('slow');
       $(this).mouseover(function(){
 			$(this).fadeOut('slow');
       });

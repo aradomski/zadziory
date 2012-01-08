@@ -5,5 +5,5 @@ tmp/
 .sass-cache/
 public/uploads/image/image/*
 .idea/*
-
+.idea/
 
