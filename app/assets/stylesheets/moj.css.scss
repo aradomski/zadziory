@@ -66,3 +66,26 @@ div.place_price{
 span.deposit{
 	font-size:8px;
 }
+
+div.paginator{
+	width:400px;
+	position:relative;
+	margin-top:200px;
+	height:30px;
+	display: block;
+}
+nav.pagination {
+  display: block;
+  margin: 2em 0;
+}
+nav.pagination a, nav.pagination .page.current {
+  padding: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav.pagination .page.current {
+  color: red;
+}
+
+
+

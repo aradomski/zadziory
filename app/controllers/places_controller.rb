@@ -7,7 +7,9 @@ class PlacesController < ApplicationController
     #@places = Place.all
     #respond_with(@places)
 	@search = Place.search(params[:search])
-	@places = @search.all
+    @places = @search.page(params[:page]).per(1)
+	#@places = @search.all
+	#respond_with(@places)
   end
 
   # GET /places/1
