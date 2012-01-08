@@ -11,6 +11,16 @@
         <span class="value">    <%= link_to get_user_username(request.user_id), user_path(request.user_id)%></span>
       </div>
   <% end %>
+  <% if current_user.has_role? :tenant and (get_status(request.status) == "accepted" or get_status(request.status) == "rented") %>
+      <div class="attribute">
+        <span class="name">Telephone</span>
+        <span class="value">    <%= get_place_telephone(request.place_id) %></span>
+      </div>
+      <div class="attribute">
+        <span class="name"> Main Address</span>
+        <span class="value">    <%= get_place_address(request.place_id)%></span>
+      </div>
+  <% end %>
     <div class="attribute">
     <span class="name">Place</span>
       <span class="value"><%= link_to request.place_id.to_s, place_path(request.place_id) %></span>
