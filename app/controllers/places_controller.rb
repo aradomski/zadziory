@@ -1,15 +1,14 @@
 class PlacesController < ApplicationController
   load_and_authorize_resource
- 
+
+  # zmienna do paginacji
+  $p = 7
+
   # GET /places
   # GET /places.xml
   def index
-    #@places = Place.all
-    #respond_with(@places)
-	@search = Place.search(params[:search])
-    @places = @search.page(params[:page]).per(4)
-	#@places = @search.all
-	#respond_with(@places)
+	  @search = Place.search(params[:search])
+    @places = @search.page(params[:page]).per($p)
   end
 
   # GET /places/1
@@ -43,13 +42,9 @@ class PlacesController < ApplicationController
   # POST /places
   # POST /places.xml
   def create
-    #@place = Place.new(params[:place])
-    #@place.save
-    #respond_with(@place)
-    # scope'owane 
-	@place = current_user.places.build(params[:place])
-	@place.save
-	respond_with(@place)
+	  @place = current_user.places.build(params[:place])
+	  @place.save
+	  respond_with(@place)
   end
 
   # PUT /places/1
@@ -82,9 +77,9 @@ class PlacesController < ApplicationController
   end
 
   def myPlaces
-	@search = Place.joins(:user).where("user_id == #{current_user.id}" ).search(params[:search])
-	@places = @search.all
-	render 'places/index'
+	  @search = Place.joins(:user).where("user_id == #{current_user.id}" ).search(params[:search])
+	  @places = @search.page(params[:page]).per($p)
+	  render 'index'
   end
 
 =begin
