@@ -9,22 +9,29 @@
 	<div class="show">
 
 		<div class="attribute">
-			<span class="name"><%= t('user.username')%> </span>
-			<span class="name"><%=  @user.name %> <%=  @user.surname %></span>
+			<span class="name"><%= t('user.username')%>:</span>
+			<span class="name"><%=  @user.username %></span>
+		</div>
+        <div class="attribute">
+			<span class="name"><%= t('user.name')%>:</span>
+			<span class="name"><%=  @user.name %></span>
+		</div>
+        <div class="attribute">
+			<span class="name"><%= t('user.surname')%>:</span>
+			<span class="name"><%=  @user.surname %></span>
 		</div>
 		<div class="attribute">
 			<span class="name"><%= t('user.years')%>:</span>
 			<span class="name"><%=  @user.years %></span>
 		</div>
 		<div class="attribute">
-			<span class="name"><%= t('user.email')%>:</span>
+			<span class="name"><%= t('user.years')%>:</span>
 			<span class="name"><%=  @user.email %></span>
 		</div>
-		
-		
+
 		<div class="link">
 			<%= link_to t('place.show.back'), panel_path, class: "btn primary" %>
-          <%= link_to t('edit.label'), edit_user_registration_path, class: "btn primary" %>
+            <%= link_to t('edit.label'), edit_user_registration_path, class: "btn primary" %>
 		</div>
   </div>
 </article>

@@ -16,7 +16,6 @@
 	margin-top:10px;
 }
 
-
 /* MIESZKANIE - ELEMENT W INDEX */
 
 #places{
@@ -220,12 +219,11 @@ a:hover img.imagedropshadow {
 	-moz-border-radius: 10px;
 }
 
-
+/* flashowy komunikat */
 #flash{
     display:none;
     position:absolute;
-    width:500px;
-    left:650px;
-    top:65px;
-
+    width:670px;
+    left:630px;
+    top:64px;
 }
