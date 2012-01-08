@@ -2,13 +2,13 @@
   <% if current_user.has_role? :tenant  %>
         <div class="attribute">
         <span class="name">Owner</span>
-        <span class="value"><%= link_to get_user_email(request.owner_id), user_path(request.user_id)%></span>
+        <span class="value"><%= link_to get_user_username(request.owner_id), user_path(request.user_id)%></span>
       </div>
   <% end %>
   <% if current_user.has_role? :owner  %>
       <div class="attribute">
         <span class="name">User</span>
-        <span class="value">    <%= link_to get_user_email(request.user_id), user_path(request.user_id)%></span>
+        <span class="value">    <%= link_to get_user_username(request.user_id), user_path(request.user_id)%></span>
       </div>
   <% end %>
     <div class="attribute">
