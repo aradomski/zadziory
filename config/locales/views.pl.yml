@@ -109,3 +109,5 @@ pl:
       info: "Moje konto"
   devise:
     register: "Rejestracja"
+    user:
+      login: "E-mail lub nazwa użytkownika"

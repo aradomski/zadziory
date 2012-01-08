@@ -4,9 +4,7 @@
 
 	<%= f.inputs do %>
 
-    <%= f.input :username, :label => t("user.username"), :input_html => { :size => 30 } %>
-
-	<%= f.input :email, :label => t("user.email"), :as => :email, :input_html => { :size => 30 } %>
+    <%= f.input :login, :label => t("devise.user.login"), :input_html => { :size => 30 } %>
 
 	<%= f.input :password, :as => :password, :label => t("user.password"), :input_html => { :size => 30 } %>
 
