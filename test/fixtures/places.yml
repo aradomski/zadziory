@@ -1,6 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  id: 1
+  user_id: 2
   is_active: false
   availability_from: 2011-12-15
   availability_to: 2011-12-15
@@ -38,9 +40,11 @@ one:
   surface: 12.4
 
 two:
+  id: 2
+  user_id: 2
   is_active: true
   availability_from: 2012-01-15
-  availability_to: 2012-02-15
+  availability_to: 2012-06-15
   price_min: 80.5
   price_max: 100.5
   deposit: 300.0
@@ -75,6 +79,8 @@ two:
   surface: 32.32
 
 three:
+  id: 3
+  user_id: 2
   is_active: true
   availability_from: 2012-01-10
   availability_to: 2012-06-30
@@ -112,6 +118,8 @@ three:
   surface: 52.00
 
 four:
+  id: 4
+  user_id: 3
   is_active: true
   availability_from: 2012-01-15
   availability_to: 2012-06-30
@@ -149,6 +157,8 @@ four:
   surface: 15.00
 
 five:
+  id: 5
+  user_id: 3
   is_active: true
   availability_from: 2012-01-15
   availability_to: 2020-01-15
@@ -186,6 +196,8 @@ five:
   surface: 100.00
 
 six:
+  id: 6
+  user_id: 3
   is_active: true
   availability_from: 2012-01-15
   availability_to: 2012-02-28
@@ -223,6 +235,8 @@ six:
   surface: 45.50
 
 seven:
+  id: 7
+  user_id: 2
   is_active: true
   availability_from: 2012-06-01
   availability_to: 2012-02-15
@@ -260,6 +274,8 @@ seven:
   surface: 50.00
 
 eight:
+  id: 8
+  user_id: 2
   is_active: true
   availability_from: 2012-05-10
   availability_to: 2012-09-01
@@ -297,6 +313,8 @@ eight:
   surface: 32.32
 
 nine:
+  id: 9
+  user_id: 2
   is_active: true
   availability_from: 2011-12-01
   availability_to: 2012-06-30
@@ -334,6 +352,8 @@ nine:
   surface: 32.32
 
 ten:
+  id: 10
+  user_id: 3
   is_active: true
   availability_from: 2012-01-15
   availability_to: 2013-02-15
@@ -371,6 +391,8 @@ ten:
   surface: 32.32
 
 eleven:
+  id: 11
+  user_id: 3
   is_active: true
   availability_from: 2012-01-15
   availability_to: 2015-02-15
@@ -393,7 +415,7 @@ eleven:
   build_year: 1995
   heating_type: co
   people_max: 4
-  for_who: Sstudenci
+  for_who: Studenci
   min_length_lease: 5
   type_length_lease: 2
   description: Fajne mieszkanie
@@ -408,6 +430,8 @@ eleven:
   surface: 32.32
 
 twelve:
+  id: 12
+  user_id: 3
   is_active: true
   availability_from: 2012-01-15
   availability_to: 2016-02-15

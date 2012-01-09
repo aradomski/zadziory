@@ -17,10 +17,20 @@ User.create :email => 'owner@rentluk.pl',
   :password=> '123456', :password_confirmation => '123456',
   :roles => [:owner] ,  :username => 'owner'
   puts "utworzono owner"
+User.create :email => 'owner2@rentluk.pl',
+  :password=> '123456', :password_confirmation => '123456',
+  :roles => [:owner] ,  :username => 'owner2'
+  puts "utworzono owner2"
 User.create :email => 'user@rentluk.pl',
   :password=> '123456', :password_confirmation => '123456',
   :roles => [:tenant]   , :username => 'user'
   puts "utworzono usera"
+User.create :email => 'user2@rentluk.pl',
+  :password=> '123456', :password_confirmation => '123456',
+  :roles => [:tenant]   , :username => 'user2'
+  puts "utworzono usera2"
 
 ActiveRecord::Fixtures.create_fixtures("#{Rails.root}/test/fixtures", "places")
 puts "dodano mieszkania, jesli chcesz dodac wiecej /test/fixtures/places.yml"
+ActiveRecord::Fixtures.create_fixtures("#{Rails.root}/test/fixtures", "requests")
+puts "dodano zapytania, jesli chcesz dodac wiecej /test/fixtures/requests.yml"

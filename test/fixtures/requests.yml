@@ -1,23 +1,68 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_id: 1
-  place_id: 1
-  owner_id: 1
+  user_id: 4
+  place_id: 2
+  owner_id: 2
   status: 1
-  date_start: 2012-01-07
-  date_end: 2012-01-07
-  number_of_people: 1
-  people_type: MyString
-  message: MyText
+  date_start: 2012-01-15
+  date_end: 2012-06-15
+  number_of_people: 4
+  people_type: Studenci
+  message: Bardzo ciekawa oferta, mysle ze sie dogadamy
 
 two:
-  user_id: 1
-  place_id: 1
-  owner_id: 1
+  user_id: 5
+  place_id: 2
+  owner_id: 2
+  status: 0
+  date_start: 2012-01-07
+  date_end: 2012-04-07
+  number_of_people: 1
+  people_type: Rosjanin
+  message: Dobra miejscowa na magazyn
+
+three:
+  user_id: 5
+  place_id: 3
+  owner_id: 2
+  status: 2
+  date_start: 2012-01-10
+  date_end: 2012-06-30
+  number_of_people: 4
+  people_type: Studenci
+  message: Monte lansino
+
+four:
+  user_id: 4
+  place_id: 6
+  owner_id: 3
+  status: 3
+  date_start: 2012-01-15
+  date_end: 2012-02-28
+  number_of_people: 6
+  people_type: Studenci
+  message: Oczywiscie jestesmy spokojni i chcemy tylko poszerzac nasze horyzonty myslowe i wiedze
+
+five:
+  user_id: 5
+  place_id: 10
+  owner_id: 3
   status: 1
   date_start: 2012-01-07
-  date_end: 2012-01-07
-  number_of_people: 1
-  people_type: MyString
-  message: MyText
+  date_end: 2012-04-07
+  number_of_people: 3
+  people_type: Studenci
+  message: ach i och
+
+six:
+  user_id: 4
+  place_id: 11
+  owner_id: 3
+  status: 2
+  date_start: 2012-01-07
+  date_end: 2013-01-07
+  number_of_people: 2
+  people_type: Studenci
+  message: Bardzo nam sie podoba
+
