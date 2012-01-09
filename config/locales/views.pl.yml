@@ -116,3 +116,38 @@ pl:
     register: "Rejestracja"
     user:
       login: "E-mail lub nazwa użytkownika"
+  requests:
+    index:
+      title: "Wszystkie transakcje"
+    show:
+      title: "Pokaż transakcje"
+      user: "Użytkownik"
+      place: "Miejsce"
+      status: "Status"
+      start: "Wynajem od: "
+      end: "Wynajem do: "
+      people: "Ilość osób"
+      people_type: "Kto wynajmuje"
+      message: "Wiadomość"
+    nav:
+      all: "Wszystkie transakcje"
+      pending: "Zarezerwowane"
+      accepted: "Zaakceptowane"
+      rented: "Wynajęte"
+      rejected: "Odrzucone"
+    request:
+      owner: "Właściciel"
+      user: "Użytkownik"
+      telephone: "Telefon kontaktowy"
+      place: "Oferta nr: "
+      status: "Status"
+      start: "Wynajem od: "
+      end: "Wynajem do: "
+      people: "Ilość osób "
+      people_type: "Kto wynajmuje"
+      message: "Wiadomość: "
+      adress: "Adres"
+    new:
+      title: "Nowa transakcja"
+    edit: 
+      title: "Edytuj transakcje"

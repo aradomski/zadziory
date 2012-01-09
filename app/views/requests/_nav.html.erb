@@ -1,17 +1,17 @@
 <div id="nav">
   <% if can? :myTenantRequests, Request %>
-        <%= link_to 'All Requests', all_tenant_requests_path , class: "btn primary" %>
-        <%= link_to 'Pending', pending_tenant_requests_path, class: "btn primary" %>
-        <%= link_to 'Accepted', accepted_tenant_requests_path, class: "btn primary" %>
-        <%= link_to 'Rented', rented_tenant_requests_path, class: "btn primary" %>
-        <%= link_to 'Rejected', rejected_tenant_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.all'), all_tenant_requests_path , class: "btn primary" %>
+        <%= link_to t('requests.nav.pending'), pending_tenant_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.accepted'), accepted_tenant_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.rented'), rented_tenant_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.rejected'), rejected_tenant_requests_path, class: "btn primary" %>
     <% end %>
    <% if can? :myOwnerRequests, Request %>
-        <%= link_to 'All Requests', all_owner_requests_path , class: "btn primary" %>
-        <%= link_to 'Pending', pending_owner_requests_path, class: "btn primary" %>
-        <%= link_to 'Accepted', accepted_owner_requests_path, class: "btn primary" %>
-        <%= link_to 'Rented', rented_owner_requests_path, class: "btn primary" %>
-        <%= link_to 'Rejected', rejected_owner_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.all'), all_owner_requests_path , class: "btn primary" %>
+        <%= link_to t('requests.nav.pending'), pending_owner_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.accepted'), accepted_owner_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.rented'), rented_owner_requests_path, class: "btn primary" %>
+        <%= link_to t('requests.nav.rejected'), rejected_owner_requests_path, class: "btn primary" %>
     <% end %>
 
 </div>
