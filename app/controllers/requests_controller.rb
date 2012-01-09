@@ -33,7 +33,8 @@ class RequestsController < ApplicationController
     @request.owner_id = User.find(Place.find(params[:request][:place_id]).user_id).id
     @request.status = 1
     @request.save
-    respond_with(@request)
+    #respond_with(@request)
+    redirect_to  pending_tenant_requests_path and return
   end
 
   # PUT /preferences/1
