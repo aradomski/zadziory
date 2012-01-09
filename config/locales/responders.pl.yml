@@ -8,3 +8,6 @@ pl:
       destroy:
         notice: '%{resource_name} został usunięty.'
         alert: '%{resource_name} nie mógł zostań usunięty.'
+    alert:
+      login:
+        fail: "Logowanie nie powiodło się."
