@@ -81,6 +81,9 @@ pl:
       garden: "Ogródek"
       edit: "Edytuj"
       back: "Powrót"
+    form:
+      description: "Opis"
+      is_active: "Czy oferta jest aktywna?"
   layout:
     application:
       home: "Strona domowa"

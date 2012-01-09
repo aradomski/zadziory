@@ -4,40 +4,40 @@
 
     <%= f.input :availability_from, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
     <%= f.input :availability_to, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
-    <%= f.input :price_min, :input_html => { :size => 5 } %>
-    <%= f.input :price_max, :input_html => { :size => 5 }%>
-    <%= f.input :deposit, :input_html => { :size => 5 } %>
-    <%= f.input :grade , :input_html => { :size => 5 }%>
-    <%= f.input :telephone, :input_html => { :size => 30 } %>
-    <%= f.input :country, :priority_countries => [:pl, :gb, :de]%>
-	<%= f.input :region,:as => :select, :collection => REGIONS_PL.sort %>
-    <%= f.input :city, :input_html => { :size => 30 } %>
-    <%= f.input :district, :input_html => { :size => 30 } %>
-    <%= f.input :street, :input_html => { :size => 30 } %>
-    <%= f.input :place_nr, :input_html => { :size => 3 }  %>
-    <%= f.input :flat_nr, :input_html => { :size => 3 } %>
-    <%= f.input :coordinates %>
-    <%= f.input :place_type,:as => :select, :collection => PLACE_TYPE.sort %>
-    <%= f.input :floor_nr, :input_html => { :size => 3 } %>
-    <%= f.input :nr_of_floors, :input_html => { :size => 3 } %>
-    <%= f.input :nr_of_rooms, :input_html => { :size => 3 } %>
-    <%= f.input :surface, :input_html => { :size => 3 } %>
-    <%= f.input :build_year, :input_html => { :size => 3 } %>
-    <%= f.input :heating_type, :input_html => { :size => 30 } %>
-    <%= f.input :people_max,  :input_html => { :size => 3 } %>
-    <%= f.input :for_who, :input_html => { :size => 30 } %>
-    <%= f.input :min_length_lease,  :input_html => { :size => 30 } %>
-    <%= f.input :type_length_lease, :input_html => { :size => 30 } %>
-    <%= f.input :description %>
-    <%= f.input :has_balcony %>
-    <%= f.input :has_garage %>
-    <%= f.input :has_basement %>
-    <%= f.input :has_parking %>
-    <%= f.input :has_internet %>
-    <%= f.input :has_terrace %>
-    <%= f.input :has_lift %>
-    <%= f.input :has_garden %>
-	<%= f.input :is_active %>
+    <%= f.input :price_min, :input_html => { :size => 5 }, :hint => t('place.show.price_min') %>
+    <%= f.input :price_max, :input_html => { :size => 5 }, :hint => t('place.show.price_max') %>
+    <%= f.input :deposit, :input_html => { :size => 5 } , :hint => t('place.show.deposit') %>
+    <%= f.input :grade , :input_html => { :size => 5 }, :hint => t('place.show.grade') %>
+    <%= f.input :telephone, :input_html => { :size => 30 } , :hint => t('place.show.telephone') %>
+    <%= f.input :country, :priority_countries => [:pl, :gb, :de], :hint => t('place.show.country') %>
+	<%= f.input :region,:as => :select, :collection => REGIONS_PL.sort , :hint => t('place.show.region') %>
+    <%= f.input :city, :input_html => { :size => 30 } , :hint => t('place.show.city') %>
+    <%= f.input :district, :input_html => { :size => 30 } , :hint => t('place.show.district') %>
+    <%= f.input :street, :input_html => { :size => 30 } , :hint => t('place.show.street') %>
+    <%= f.input :place_nr, :input_html => { :size => 3 }  , :hint => t('place.show.place_nr') %>
+    <%= f.input :flat_nr, :input_html => { :size => 3 } , :hint => t('place.show.float_nr') %>
+    <%= f.input :coordinates , :hint => t('place.show.coordinates') %>
+    <%= f.input :place_type,:as => :select, :collection => PLACE_TYPE.sort , :hint => t('place.show.place_type') %>
+    <%= f.input :floor_nr, :input_html => { :size => 3 } , :hint => t('place.show.floor_nr') %>
+    <%= f.input :nr_of_floors, :input_html => { :size => 3 } , :hint => t('place.show.nr_of_floor') %>
+    <%= f.input :nr_of_rooms, :input_html => { :size => 3 } , :hint => t('place.show.rooms') %>
+    <%= f.input :surface, :input_html => { :size => 3 } , :hint => t('place.show.surface') %>
+    <%= f.input :build_year, :input_html => { :size => 3 } , :hint => t('place.show.build') %>
+    <%= f.input :heating_type, :input_html => { :size => 30 } , :hint => t('place.show.heating') %>
+    <%= f.input :people_max,  :input_html => { :size => 3 } , :hint => t('place.show.people') %>
+    <%= f.input :for_who, :input_html => { :size => 30 } , :hint => t('place.show.who') %>
+    <%= f.input :min_length_lease,  :input_html => { :size => 30 } , :hint => t('place.show.length_min') %>
+    <%= f.input :type_length_lease, :input_html => { :size => 30 } , :hint => t('place.show.type_length') %>
+    <%= f.input :description , :hint => t('place.form.description') %>
+    <%= f.input :has_balcony , :hint => t('place.show.balcony') %>
+    <%= f.input :has_garage , :hint => t('place.show.garage') %>
+    <%= f.input :has_basement , :hint => t('place.show.basement') %>
+    <%= f.input :has_parking , :hint => t('place.show.parking') %>
+    <%= f.input :has_internet , :hint => t('place.show.internet') %>
+    <%= f.input :has_terrace , :hint => t('place.show.terrace') %>
+    <%= f.input :has_lift , :hint => t('place.show.lift') %>
+    <%= f.input :has_garden , :hint => t('place.show.garden') %>
+	<%= f.input :is_active, :hint => t('place.form.is_active') %>
         <%= f.inputs :for => :images do |i| %>
               <% unless @place.images.empty? %>
                <%= image_tag(@place.images["#%i".to_i].image_url(:thumb).to_s) %>
