@@ -44,8 +44,11 @@ $(function()
 					},
 				title: {
         	         		//text: 'My maslo',
-        	          		
         	      		}
+				},
+				position: {
+							at: 'right center', // Position the tooltip above the link
+							my: 'left center',
 				},
 				style: {
         	      			classes: 'ui-tooltip-shadow ui-tooltip-youtube'
