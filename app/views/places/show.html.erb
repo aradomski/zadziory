@@ -28,7 +28,7 @@
    <div class="show_content">
   
   <div class="place_adress">
-  Dane: <br />
+   <%= t('place.show.dane') %> <br />
     <%= t('place.show.owner')%> <%= link_to get_user_username(@place.user_id), user_path(@place.user_id)%> <br />
     <% if current_user.id == @place.user_id %>
         <%= t('place.show.telephone')%> <%= @place.telephone %> <br />
@@ -43,7 +43,7 @@
   <div class="place_price">
   <% t('place.show.price_min')%> <% @place.price_min %>
  <% t('place.show.price_max')%>  <% @place.price_max %>
-   <h1 class="price_for_you"><%= t('place.show.price_for_you')%> <%= (@place.price_max + @place.price_min)/2 %> </h1>
+   <h1 class= <% t('place.show.price_for_you') %> ><%= t('place.show.price_for_you')%> <%= (@place.price_max + @place.price_min)/2 %> </h1>
     <span class="deposit"><%= t('place.show.deposit')%><%= @place.deposit %></span>
   </div>  
   
