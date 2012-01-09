@@ -27,7 +27,27 @@ $(function(){
 	var aval = $('.show_header input:hidden');
 	//alert(aval.attr('value'));
 	if(aval.attr('value') == "true"){
-		aval.parent().css('background', '#1eff00');
+		aval.parent().css('background', '#7ae334');
 	}
 
 });
+
+$(function()
+{	
+	$('.inline-hints').hide();
+	if($('input').next('.inline-hints').text() != ''){
+		$('input').qtip({
+			content: function(){
+				var text = $(this).next('.inline-hints').text();
+				return text;
+				},
+			 position: {
+			  my: 'top left', 
+      			  at: 'bottom right'
+			}
+
+		});
+	}	
+});
+
+

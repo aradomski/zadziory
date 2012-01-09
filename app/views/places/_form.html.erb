@@ -1,7 +1,6 @@
 <div id="form">
 <%= semantic_form_for @place, :html => { :multipart => true} do |f| %>
   <%= f.inputs do %>
-
     <%= f.input :availability_from, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
     <%= f.input :availability_to, :as => :string , :input_html => { :class => "date_stealer", :size => 30 } %>
     <%= f.input :price_min, :input_html => { :size => 5 }, :hint => t('place.show.price_min') %>
