@@ -8,11 +8,11 @@ end
   authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
 	
 	if authentication
-		flash[:notice] = "Logowanie udane!"
+		flash[:notice] = t("devise.sessions.signed_in")
 		sign_in_and_redirect(:user, authentication.user)
 	elsif current_user
 		current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
-		flash[:notice] = "Logowanie udane!"
+		flash[:notice] = t("devise.sessions.signed_in")
 		redirect_to authentications_url
 	else
 		user = User.new
@@ -31,11 +31,11 @@ end
     end
 
     if user.save
-			flash[:notice] = "Logowanie udane!"
+			flash[:notice] = t("devise.sessions.signed_in")
 			sign_in_and_redirect(:user, user)
     else
 			session[:omniauth] = omniauth.except('extra')
-      flash[:notice] = "Mamy problem!"
+      flash[:alert] = t("flash.alert.login.fail")
 			redirect_to new_user_registration_url
     end
 	end
