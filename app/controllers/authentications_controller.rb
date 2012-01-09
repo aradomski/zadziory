@@ -27,7 +27,7 @@ end
     elsif omniauth['provider'] == 'twitter'
       #raise request.env["omniauth.auth"].to_yaml
 		  user.username = omniauth['user_info']['nickname']
-			user.email = ''
+			user.email = 'change.email@please.com'
     end
 
     if user.save
