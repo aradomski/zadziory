@@ -131,7 +131,7 @@ pl:
       message: "Wiadomość"
     nav:
       all: "Wszystkie transakcje"
-      pending: "Zarezerwowane"
+      pending: "Oczekujące"
       accepted: "Zaakceptowane"
       rented: "Wynajęte"
       rejected: "Odrzucone"
