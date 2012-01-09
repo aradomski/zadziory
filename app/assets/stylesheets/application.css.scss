@@ -40,6 +40,20 @@
 	cursor: pointer;
 }
 
+.requests{
+	float:left;
+	margin-left:20px;
+	width:620px;
+}
+.request {
+	padding-bottom:8px;
+	margin-bottom: 7px;
+	border: 2px solid #0776A0;
+	min-height:100px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
 .placee:hover {
 	background-color:#FFCB94;
 }
