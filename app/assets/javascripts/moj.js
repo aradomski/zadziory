@@ -37,15 +37,19 @@ $(function()
 	$('.inline-hints').hide();
 	if($('input').next('.inline-hints').text() != ''){
 		$('input').qtip({
-			content: function(){
-				var text = $(this).next('.inline-hints').text();
-				return text;
+			content: {
+				text: function(){
+					var text = $(this).next('.inline-hints').text();
+					return text;
+					},
+				title: {
+        	         		//text: 'My maslo',
+        	          		
+        	      		}
 				},
-			 position: {
-			  my: 'top left', 
-      			  at: 'bottom right'
-			}
-
+				style: {
+        	      			classes: 'ui-tooltip-shadow ui-tooltip-youtube'
+        	  		}
 		});
 	}	
 });
